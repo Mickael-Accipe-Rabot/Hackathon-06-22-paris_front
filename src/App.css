@@ -6,8 +6,8 @@
           /* VARIABLES */
 :root{
   /* colors */
-  --font-color: #ffffff;
-  --primary-color: #ffffff;
+  --font-color: #000000;
+  --primary-color: #fdfdfd;
   --secondary-color: #ffffff;
   --tertiary-color: #ffffff;
 
@@ -57,7 +57,7 @@
 
 /* className="page" (A mettre dans la div parente de chaque composant page! */
 .page{
-  margin:var(--marginM);
+  margin:5rem 0 0 0;
 }
 
 h1{
@@ -102,6 +102,8 @@ transition:var(--transition2);
 }
 
 /* -----------DESKTOP----------- */
-@media screen and(min-width:960px) {
-  
+@media screen and (min-width:960px) {
+  .page{
+    margin: 0 0 0 6rem;
+  }
 }
