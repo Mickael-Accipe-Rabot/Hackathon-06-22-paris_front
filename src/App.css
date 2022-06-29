@@ -11,6 +11,10 @@
   --secondary-color: #ffffff;
   --tertiary-color: #ffffff;
 
+  /* containers */
+  --box-shadow:0 5px 10px rgba(0, 0, 0, 0.432);
+  --container-br-S: 4px;
+  --container-br-L: 8px;
   /* fonts sizes */
   --fontS:1rem;
   --fontM:2rem;
@@ -18,6 +22,7 @@
   --fontXL:4rem;
 
   /* margin sizes  */
+  --marginXS:.5rem;
   --marginS: 1rem;
   --marginM: 2rem;
   --marginL: 3rem;
