@@ -7,10 +7,12 @@ import Login from './pages/Login';
 import ProjectDetails from './pages/ProjectDetail';
 import ProjectForm from './pages/ProjectForm';
 import UserProfile from './pages/UserProfile';
+import Navbar from './components/nav/Navbar';
 
 function App() {
   return (
     <div className="App">
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Login/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
