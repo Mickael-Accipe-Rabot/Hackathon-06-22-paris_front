@@ -114,7 +114,7 @@ const Login = () => {
 
         <button type="submit" className="button-register">SUBMIT</button>
         <p className="error">{error}</p>
-        <p className="forgot-password">Forgot password ?</p>
+        <Link to={{ pathname: `/Home` }} style={{ textDecoration: 'none' }}><p className="forgot-password">Forgot password ?</p></Link>
       </form>
     </div>
       </div>
