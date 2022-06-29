@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+          /* VARIABLES */
+:root{
+  /* colors */
+  --font-color: #ffffff;
+  --primary-color: #ffffff;
+  --secondary-color: #ffffff;
+  --tertiary-color: #ffffff;
+
+  /* fonts sizes */
+  --fontS:1rem;
+  --fontM:2rem;
+  --fontL:3rem;
+  --fontXL:4rem;
+
+  /* margin sizes  */
+  --marginS: 1rem;
+  --marginM: 2rem;
+  --marginL: 3rem;
+  --marginXL: 4rem;
+
+  /* padding sizes */
+  --paddingS: 1rem;
+  --paddingM: 2rem;
+  --paddingL: 3rem;
+  --paddingXL: 4rem;
+
+  /* transition */
+  --transition1:ease-in-out 333ms;
+  --transition2:ease-in-out 666ms;
+  --transition3:ease-in-out 1000ms;
+
+  /* input */
+  --input-br:10px;
+  --input-shadow:0 0 10px rgba(0, 0, 0, 0.212);
+  --input-inset-shadow:inset 0 -5px 10px rgba(0, 0, 0, 0.212);
+  --input-h:1.5rem;
+  --input-w:10rem;
+
+  /* button */
+  --btn-br:10px;
+  --btn-shadow:0 0 10px rgba(0, 0, 0, 0.212);
+  --btn-hover-shadow:0 0 10px rgba(0, 0, 0, 0.212);
+  --btn-h: 1.5rem;
+  --btn-w:6rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* -----------SET----------- */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* className="page" (A mettre dans la div parente de chaque composant page! */
+.page{
+  margin:var(--marginM);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1{
+  font-size: var(--fontXL);
+}
+h2{
+  font-size:var(--fontL);
+}
+h3{
+  font-size: var(--fontM);
+}
+
+
+/* className="btn" */
+.btn{
+width: var(--btn-w);
+height:var(--btn-h);
+color: var(--primary-color);
+background-color: var(--secondary-color);
+font-size: var(--fontM);
+border-radius: var(--btn-br);
+box-shadow: var(--btn-shadow);
+transition:var(--transition2);
+}
+.btn:hover{
+  background-color: var(--primary-color);
+  color:var(--tertiary-color);
+}
+
+/* className="inpt" */
+.inpt{
+  width:var(--input-w);
+  height:var(--input-h);
+  border-radius: var(--input-br);
+  box-shadow: var(--input-inset-shadow),var(--input-shadow);
+  padding:var(--paddingM)
+}
+
+/* -----------TABLET----------- */
+@media screen and(min-width:720px) {
+
+}
+
+/* -----------DESKTOP----------- */
+@media screen and(min-width:960px) {
+  
 }
