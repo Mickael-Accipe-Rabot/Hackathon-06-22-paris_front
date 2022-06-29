@@ -8,11 +8,15 @@ import ProjectDetails from './pages/ProjectDetail';
 import ProjectForm from './pages/ProjectForm';
 import UserProfile from './pages/UserProfile';
 import Navbar from './components/nav/Navbar';
+import CreateProjectButton from './components/createProjectButton/CreateProjectButton';
 
 function App() {
+
+
   return (
     <div className="App">
       <Navbar/>
+      
       <Routes>
         <Route path="/" element={<Login/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
