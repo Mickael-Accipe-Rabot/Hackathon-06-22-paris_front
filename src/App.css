@@ -112,6 +112,6 @@ transition:var(--transition2);
 /* -----------DESKTOP----------- */
 @media screen and (min-width:960px) {
   .page{
-    margin: 0 0 0 6rem;
+    margin: 0 0 0 8rem;
   }
 }

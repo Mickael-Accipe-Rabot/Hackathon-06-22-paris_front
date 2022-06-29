@@ -1,4 +1,5 @@
 import React from 'react';
+import logowhite from '../../assets/images/logowhite.svg'
 import './navbar.css';
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
@@ -9,16 +10,18 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <NavLink
-        to="./home"
-        className={(navData) =>
-          navData.isActive ? 'active nav-links' : 'nav-links'
-        }
-        onClick={handleClick}
-      >
-        <img src="" alt="#" className="navbar-logo" />
-      </NavLink>
       <ul className="navbar-list">
+        <li>
+          <NavLink
+            to="./home"
+            className={(navData) =>
+              navData.isActive ? 'active nav-links navlink-logo' : 'nav-links navlink-logo'
+            }
+            onClick={handleClick}
+          >
+            <img src={logowhite} alt="#" className="navbar-logo navlink-logo" />
+          </NavLink>
+        </li>
         <li>
           <NavLink
             to="./home"
@@ -41,18 +44,17 @@ const Navbar = () => {
             Clients
           </NavLink>
         </li>
-      <li>
+      </ul>
+
       <NavLink
         to="./user-profile"
         className={(navData) =>
-          navData.isActive ? 'active nav-links' : 'nav-links'
+          navData.isActive ? 'active nav-links navlink-user' : 'nav-links navlink-user'
         }
         onClick={handleClick}
       >
-        <img src="" alt="#" className="navbar-user" />
+        <img src="https://randomwordgenerator.com/img/picture-generator/55e0d1464d52aa14f1dc8460962e33791c3ad6e04e507441722a72dc9244c4_640.jpg" alt="#" className="navbar-user" />
       </NavLink>
-      </li>
-      </ul>
     </div>
   );
 };
