@@ -14,6 +14,10 @@
   --tertiary-color: #ffffff;
   --light-color: #f0f0f0;
 
+  /* containers */
+  --box-shadow:0 5px 10px rgba(0, 0, 0, 0.432);
+  --container-br-S: 4px;
+  --container-br-L: 8px;
   /* fonts sizes */
   --fontS:1rem;
   --fontM:2rem;
@@ -21,6 +25,7 @@
   --fontXL:4rem;
 
   /* margin sizes  */
+  --marginXS:.5rem;
   --marginS: 1rem;
   --marginM: 2rem;
   --marginL: 3rem;
@@ -60,7 +65,7 @@
 
 /* className="page" (A mettre dans la div parente de chaque composant page! */
 .page{
-  margin:var(--marginM);
+  margin:5rem 0 0 0;
 }
 
 h1{
@@ -105,6 +110,8 @@ transition:var(--transition2);
 }
 
 /* -----------DESKTOP----------- */
-@media screen and(min-width:960px) {
-  
+@media screen and (min-width:960px) {
+  .page{
+    margin: 0 0 0 6rem;
+  }
 }
