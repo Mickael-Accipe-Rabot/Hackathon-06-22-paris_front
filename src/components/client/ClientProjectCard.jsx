@@ -4,12 +4,12 @@ import axios from 'axios'
 import "./clientProjectCard.css"
 import moment from 'moment';
 
-const ClientProjectCard = () => {
+const ClientProjectCard = ({ clientID }) => {
     const [clientProjectInfo, setClientProjectInfo] = useState([]);
 
   useEffect(() => {
       axios
-        .get('http://localhost:8000/api/projects')
+        .get(`http://localhost:8000/api/projects/${clientID}`)
         .then((res) => res.data)
         .then((data) => setClientProjectInfo(data));
     }, []);
@@ -21,10 +21,7 @@ const ClientProjectCard = () => {
     <div className='ClientProjectCard'>
 
 {clientProjectInfo &&
-        clientProjectInfo.map((project) => (
-
      <div className='clientProject-data'>
-
 <table className='clientProject-table'>
           <thead>
             <tr className='clientProject-tr'>
@@ -37,16 +34,16 @@ const ClientProjectCard = () => {
             </tr>
           </thead>
           <tbody className='clientProject-td'>
-            <td>{project.name}</td>
+            <td>{clientProjectInfo.name}</td>
             <td>{start_date}</td>
             <td>{end_date}</td>
             <td>React-PHP</td>
-            <td>{project.priority}</td>
-            <td>{project.status_id}</td>
+            <td>{clientProjectInfo.priority}</td>
+            <td>{clientProjectInfo.status_id}</td>
           </tbody>
         </table>     
       </div>
-    ))}
+    }
   </div>
     )}
 

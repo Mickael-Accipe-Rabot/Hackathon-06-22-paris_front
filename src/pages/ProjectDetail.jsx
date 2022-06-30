@@ -66,7 +66,7 @@ const ProjectDetails = () => {
   
                               <div className='projectDetails-stackholders'>
                                 <h4 className='projectDetails-title'>Collaborators</h4>
-                              <EmployeeList/>
+                              <EmployeeList projectID={projectID}/>
                               </div>
                               </div> 
     

@@ -38,7 +38,7 @@ const ClientDetails = ({ client }) => {
 
       <div className='clientDetails-project'>
         <h2 className='clientDetails-title'>Projects</h2>
-       <div className='clientDetails-card'> <ClientProjectCard /> </div>
+       <div className='clientDetails-card'> <ClientProjectCard clientID={clientID}/> </div>
       </div>
       </div>
 }
