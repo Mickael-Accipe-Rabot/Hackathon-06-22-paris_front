@@ -10,6 +10,7 @@ import ProjectDetails from "./pages/ProjectDetail";
 import ProjectForm from "./pages/ProjectForm";
 import UserProfile from "./pages/UserProfile";
 import Navbar from './components/nav/Navbar';
+import CoursesDetails from "./pages/CoursesDetails";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/client-details/:clientID" element={<ClientDetails />}></Route>
           <Route path="/clientslist" element={<ClientsList />}></Route>
           <Route path="/project-details/:projectID" element={<ProjectDetails />}></Route>
+          <Route path="/courses-details" element={<CoursesDetails />}></Route>
           <Route path="/project-form" element={<ProjectForm />}></Route>
           <Route path="/user-profile" element={<UserProfile />}></Route>
         </Routes>
