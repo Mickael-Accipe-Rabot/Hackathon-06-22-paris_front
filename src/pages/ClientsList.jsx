@@ -6,14 +6,19 @@ const ClientsList = () => {
 
   return (
     <div className='page clientsList-container'>
-      Hello
         <div className='clientCard'>
-          <clientCard/>
-          <clientCard/>
-          <clientCard/>
-          <clientCard/>
-          <clientCard/>
-          <clientCard/>
+        <div className='ClientCard-title'>
+      <h4 className='clientList-name'>Client</h4>
+      <h4 className='clientList-location'>Location</h4>
+      <h4 className='clientList-sector'>Sector</h4>
+      </div>
+          <div className='clientList-card'><ClientCard/></div>
+          <div className='clientList-card'><ClientCard/></div>
+          <div className='clientList-card'><ClientCard/></div>
+          <div className='clientList-card'><ClientCard/></div>
+          <div className='clientList-card'><ClientCard/></div>
+          <div className='clientList-card'><ClientCard/></div>
+          <div className='clientList-card'><ClientCard/></div>
         </div>  
     </div>
   )
