@@ -39,6 +39,7 @@
   --marginXL: 4rem;
 
   /* padding sizes */
+  --paddingXS:.5rem;
   --paddingS: 1rem;
   --paddingM: 2rem;
   --paddingL: 3rem;
