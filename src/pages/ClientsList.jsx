@@ -15,15 +15,15 @@ const ClientsList = () => {
     }, []);
   return (
     <div className='page clientsList-container'>
-<div>
+        <div>
         {clientInfo &&
         clientInfo.map((client) => (
-<div>
-        <ClientDetails client={client}/>
-</div>
-))}
-</div>  
-</div>
+            <div className="clientCard">
+            <ClientDetails client={client}/>
+            </div>
+        ))}
+        </div>  
+    </div>
   )
 }
 
