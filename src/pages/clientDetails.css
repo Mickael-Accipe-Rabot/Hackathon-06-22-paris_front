@@ -16,6 +16,14 @@
     flex-direction: column;
     margin-bottom: 2rem;
     margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.client-personalInfoTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .client-description {

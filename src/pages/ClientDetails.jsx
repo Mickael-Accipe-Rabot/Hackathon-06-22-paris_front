@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import './clientDetails.css'
 import ClientProjectCard from "../components/client/ClientProjectCard"
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EmailIcon from '@mui/icons-material/Email';
 
 const ClientDetails = ({ client }) => {
   const [clientInfo, setClientInfo] = useState([]);
 
   useEffect(() => {
       axios
-        .get('http://localhost:8000/api/clients{id}')
+        .get('http://localhost:8000/api/clients')
         .then((res) => res.data)
         .then((data) => setClientInfo(data));
     }, []);
@@ -25,8 +27,8 @@ const ClientDetails = ({ client }) => {
       <div className='client-content'>
         <h1 className='client-name'>{client.name}</h1>
       <div className='client-personalInfo'>
-        <p>{client.city}</p>
-        <p>{client.email}</p>
+        <p className='client-personalInfoTitle'><LocationOnIcon style={{ color: "#DB743E" }}/> {client.city}</p>
+        <p className='client-personalInfoTitle'><EmailIcon style={{ color: "#DB743E" }}/> {client.email}</p>
         </div>
 
       <div className='client-description'>
@@ -37,8 +39,6 @@ const ClientDetails = ({ client }) => {
       <div className='client-project'>
         <h2 className='client-title'>Projects</h2>
        <div className='client-card'> <ClientProjectCard /> </div>
-        <ClientProjectCard />
-        <ClientProjectCard />
       </div>
       </div>
 ))}

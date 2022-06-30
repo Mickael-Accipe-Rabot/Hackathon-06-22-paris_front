@@ -14,10 +14,10 @@ th {
     text-align: left;
     width: 20%;
     padding-bottom: 5px;
+    padding-top: 1rem;
     font-size: 12px;
     font-weight: 400;
     font-family: var(--big-font);
-
 }
 
 td {
@@ -26,5 +26,6 @@ td {
     font-size: 10px;
     font-weight: 0;
     font-family: var(--little-font);
-    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid lightgray;
 }
