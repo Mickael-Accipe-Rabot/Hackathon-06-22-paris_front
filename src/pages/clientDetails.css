@@ -1,0 +1,47 @@
+.client-title {
+    font-family: var(--big-font);
+    font-size: var( --fontS);
+    margin-bottom: 1rem;
+}
+
+.client-name {
+    font-family: var(--big-font);
+    font-size: var( --fontM);
+    color: var(--secondary-color);
+    margin-left: 3rem;
+}
+
+.client-personalInfo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+}
+
+.client-description {
+    background-color: white;
+    width: 90%;
+    padding: 1rem;
+    margin-left: 3rem;
+    border-radius: 5px;
+}
+
+.client-project {
+    margin-bottom: 1rem;
+    background-color: white;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.project-link {
+    margin-left: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-family: var(--little-font);
+    font-size: 10px;
+    color: gray;
+    text-decoration: none;
+}
