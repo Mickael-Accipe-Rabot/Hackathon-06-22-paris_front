@@ -71,11 +71,6 @@
   min-height: 100vh;
 }
 
-body {
-  overflow: hidden;
-  font-family: var(--big-font);
-}
-
 /* className="page" (A mettre dans la div parente de chaque composant page! */
 .page{
   margin:5rem 0 0 0;
@@ -96,7 +91,6 @@ h3{
 p{
   font-family: var(--little-font);
 }
-
 
 /* className="btn" */
 .btn{

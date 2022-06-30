@@ -54,10 +54,9 @@ input {
   border-radius: 5px;
   padding: 10px;
   font-size: 13px;
-  font-family: "Montserrat";
-  font-style: normal;
+  /* font-family: "Montserrat";
+  font-style: normal; */
   color: #979191;
-  font-weight: 400;
   width: 100%;
 }
 
@@ -105,10 +104,7 @@ select {
   height: 3rem;
   border-radius: 5px;
   font-size: 13px;
-  font-family: "Montserrat";
-  font-style: normal;
   color: #979191;
-  font-weight: 400;
   width: 100%;
 }
 
@@ -120,12 +116,14 @@ textarea {
   height: 3rem;
   border-radius: 5px;
   font-size: 13px;
-  font-family: "Montserrat";
-  font-style: normal;
-  color: #979191;
-  font-weight: 400;
   height: 100px;
   padding: 0.5rem;
+}
+
+textarea::placeholder {
+  font-family: Arial;
+  font-style: normal;
+  color: #979191;
 }
 
 /* -----------DESKTOP----------- */
@@ -172,22 +170,6 @@ textarea {
     width: 400px;
     margin-top: 40px;
     margin-bottom: 25px;
-  }
-
-  input {
-    background-color: #f8f6fa;
-    display: flex;
-    align-items: center;
-    border: 0.0625rem solid #f8f6fa;
-    height: 3rem;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 13px;
-    font-family: "Montserrat";
-    font-style: normal;
-    color: #979191;
-    font-weight: 400;
-    width: 100%;
   }
 
   .bloc-date {

@@ -91,7 +91,6 @@ const ProjectForm = () => {
           <input
             placeholder="Enter a project title"
             type="text"
-            required
             value={project}
             onChange={(e) => setProject(e.target.value)}
           />
@@ -102,7 +101,6 @@ const ProjectForm = () => {
               <select
                 placeholder="Select type"
                 type="text"
-                required
                 value={secret}
                 onChange={(e) => setSecret(e.target.value)}
               >
@@ -116,7 +114,6 @@ const ProjectForm = () => {
               <select
                 placeholder="Select a category"
                 type="text"
-                required
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
               >
@@ -133,7 +130,6 @@ const ProjectForm = () => {
               <input
                 placeholder="Enter a client name"
                 type="text"
-                required
                 value={client}
                 onChange={(e) => setClient(e.target.value)}
               />
@@ -144,7 +140,6 @@ const ProjectForm = () => {
               <select
                 placeholder="Select a status"
                 type="text"
-                required
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
               >
@@ -162,7 +157,6 @@ const ProjectForm = () => {
               <select
                 placeholder="Enter an agency"
                 type="text"
-                required
                 value={dataAgency}
                 onChange={(e) => setDataAgency(e.target.value)}
               >
@@ -178,7 +172,6 @@ const ProjectForm = () => {
               <select
                 placeholder="Enter an activity"
                 type="textarea"
-                required
                 value={dataActivity}
                 onChange={(e) => setDataActivity(e.target.value)}
               >
@@ -194,7 +187,6 @@ const ProjectForm = () => {
           <textarea
             placeholder="Enter a description"
             type="textarea"
-            required
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
@@ -205,7 +197,6 @@ const ProjectForm = () => {
               <select
                 placeholder="Select a stack"
                 type="text"
-                required
                 value={dataStackOne}
                 onChange={(e) => setDataStackOne(e.target.value)}
               >
@@ -221,7 +212,6 @@ const ProjectForm = () => {
               <select
                 placeholder="Select a stack"
                 type="text"
-                required
                 value={dataStackTwo}
                 onChange={(e) => setDataStackTwo(e.target.value)}
               >
@@ -239,7 +229,6 @@ const ProjectForm = () => {
               <input
                 placeholder="DD/MM/YYYY"
                 type="date"
-                required
                 value={startTime}
                 onChange={(e) => setStartTime(e.target.value)}
               />
@@ -250,7 +239,6 @@ const ProjectForm = () => {
               <input
                 placeholder="DD/MM/YYYY"
                 type="date"
-                required
                 value={endTime}
                 onChange={(e) => setEndTime(e.target.value)}
               />
@@ -261,7 +249,6 @@ const ProjectForm = () => {
           <select
             placeholder="Select a priority project"
             type="select"
-            required
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
           >
