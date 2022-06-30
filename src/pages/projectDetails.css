@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     background-color: white;
-    width: 80%;
+    width: 85%;
     height: 5rem;
     padding-left: 2rem;
     margin-bottom: 2rem;
@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: flex-start;
     background-color: white;
-    width: 40%;
+    width: 50%;
     padding: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -32,6 +32,7 @@
     justify-content: space-between;
     margin-right: 10rem;
     margin-bottom: 2rem;
+    width: 90%;
 }
 
 .project-name {
@@ -51,9 +52,8 @@ table {
 th {
     color: black;
     text-align: left;
-    width: 20%;
     padding-bottom: 5px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     font-family: var(--big-font);
 
@@ -62,7 +62,7 @@ th {
 td {
     text-align: left;
     word-wrap: break-word;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 0;
     font-family: var(--little-font);
 }
@@ -74,6 +74,25 @@ h4 {
 .project-desc {
     font-family: var(--little-font);
     font-size: 12px;
+}
+
+.project-stackholders {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    width: 50%;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 3rem;
+    border-radius: 5px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
 }
 
 .project-link {
