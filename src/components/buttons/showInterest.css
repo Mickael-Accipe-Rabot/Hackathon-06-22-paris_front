@@ -1,0 +1,21 @@
+.ShowInterest-btn {
+    background-color: none;
+    border: 1px solid var(--secondary-color);
+    height: 2rem;
+    width: 10rem;
+    border-radius: var(--btn-br);
+    font-family: var(--little-font);
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+
+.ShowInterest-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.ShowInterest {
+    display: flex;
+    align-items: center;
+}

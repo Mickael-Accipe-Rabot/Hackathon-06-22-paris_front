@@ -4,7 +4,7 @@ import './showInterest.css'
 const ShowInterest = () => {
   return (
     <div className='ShowInterest'>
-        <button className='btn'>I want to participate</button>
+        <button className='ShowInterest-btn'>I want to participate</button>
     </div>
   )
 }
