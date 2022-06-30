@@ -1,12 +1,11 @@
 import React from 'react'
+import "./employeeCard.css"
 
-const EmployeeCard = ({employee}) => {
+const EmployeeCard = ({ employee }) => {
   return (
     <div className='EmployeeCard'>
-<h1>{employee.firstname}</h1>
-<h1>{employee.lastname}</h1>
-    </div>
-  )
+    <p className='employeeCard-name'>{employee.firstname} {employee.lastname}</p>
+  </div>  )
 }
 
 export default EmployeeCard
