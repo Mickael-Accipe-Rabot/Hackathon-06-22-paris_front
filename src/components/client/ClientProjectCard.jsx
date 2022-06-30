@@ -8,7 +8,7 @@ const ClientProjectCard = () => {
 
   useEffect(() => {
       axios
-        .get('??')
+        .get('http://localhost:8000/api/projects')
         .then((res) => res.data)
         .then((data) => setClientProjectInfo(data));
     }, []);
@@ -17,19 +17,29 @@ const ClientProjectCard = () => {
 
 {clientProjectInfo &&
         clientProjectInfo.map((project) => (
+
      <div className='clientProject-data'>
-         <h4>Project</h4>
-         <p>{project.name}</p>
-         <h4>Date Created</h4>
-         <p>{project.date}</p>
-         <h4>Deadline</h4>
-         <p>{project.duration}</p>
-         <h4>Stack</h4>
-         <p>{project.stack}</p>
-         <h4>Priority</h4>
-         <p>{project.priority}</p>
-         <h4>Status</h4>
-         <p>{project.status}</p>      
+
+<table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Date Created</th>
+              <th>Deadline</th>
+              <th>Stack</th>
+              <th>Priority</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <td>{project.name}</td>
+            <td>{project.start_date}</td>
+            <td>{project.end_date}</td>
+            <td>React-PHP</td>
+            <td>{project.priority}</td>
+            <td>{project.status_id}</td>
+          </tbody>
+        </table>     
       </div>
     ))}
   </div>

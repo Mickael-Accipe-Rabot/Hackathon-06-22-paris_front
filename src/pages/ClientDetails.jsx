@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import './clientDetails.css'
 import ClientProjectCard from "../components/client/ClientProjectCard"
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EmailIcon from '@mui/icons-material/Email';
 
 const ClientDetails = ({ client }) => {
   const [clientInfo, setClientInfo] = useState([]);
 
   useEffect(() => {
       axios
-        .get('??')
+        .get('http://localhost:8000/api/clients')
         .then((res) => res.data)
         .then((data) => setClientInfo(data));
     }, []);
@@ -18,28 +20,25 @@ const ClientDetails = ({ client }) => {
   return (
     <div className='page clientDetails-container'>
       <Link to="/clientslist">
-      <p> Back to clients </p> 
+      <p className='project-link'> Back to clients </p> 
       </Link>
       {clientInfo &&
         clientInfo.map((client) => (
       <div className='client-content'>
+        <h1 className='client-name'>{client.name}</h1>
       <div className='client-personalInfo'>
-        <p>{client.name}</p>
-        <p>{client.city}</p>
-        <p>{client.mail}</p>
-        <p>{client.phone}</p>
+        <p className='client-personalInfoTitle'><LocationOnIcon style={{ color: "#DB743E" }}/> {client.city}</p>
+        <p className='client-personalInfoTitle'><EmailIcon style={{ color: "#DB743E" }}/> {client.email}</p>
         </div>
 
       <div className='client-description'>
-        <h2>Description</h2>
-        <p>Texte</p>
+        <h2 className='client-title'>Description</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
 
       <div className='client-project'>
-        <h2>Projects</h2>
-        <ClientProjectCard />
-        <ClientProjectCard />
-        <ClientProjectCard />
+        <h2 className='client-title'>Projects</h2>
+       <div className='client-card'> <ClientProjectCard /> </div>
       </div>
       </div>
 ))}
