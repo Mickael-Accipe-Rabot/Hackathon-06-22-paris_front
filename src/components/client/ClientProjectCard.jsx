@@ -8,7 +8,7 @@ const ClientProjectCard = () => {
 
   useEffect(() => {
       axios
-        .get('??')
+        .get('')
         .then((res) => res.data)
         .then((data) => setClientProjectInfo(data));
     }, []);

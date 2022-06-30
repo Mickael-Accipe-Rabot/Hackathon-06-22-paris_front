@@ -6,8 +6,11 @@
     color: gray;
     padding: 1rem;
     margin-bottom: 1rem;
+    padding-top: 2rem;
     font-family: var( --big-font);
     font-size: 14px;
+    width: 95%;
+    margin-left: 3rem;
 }
 
 .clientList-name {
@@ -20,10 +23,4 @@
 
 .clientList-sector {
     width: 50%;
-}
-
-.clientList-card:hover {
-box-shadow: 3px 3px 3px 3px black;
-transition: var(--transition1);
-cursor: pointer;
 }
