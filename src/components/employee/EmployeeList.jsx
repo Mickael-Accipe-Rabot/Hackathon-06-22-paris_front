@@ -14,40 +14,14 @@ const EmployeeList = () => {
           .then((res) => res.data)
           .then((data) => setEmployeeInfo(data));
       }, []);
-      console.log(employeeInfo);
+
   return (
     <div className='EmployeeList'>
         <div>
         {employeeInfo &&
-          employeeInfo.map((employee) => (
-            <div>
-              <EmployeeCard employee={employee}/>
-            </div>
-          ))}
-          </div>
-          <div>
-        {employeeInfo &&
-          employeeInfo.map((employee) => (
-            <div>
-              <EmployeeCard employee={employee}/>
-            </div>
-          ))}
-          </div>
-          <div>
-        {employeeInfo &&
-          employeeInfo.map((employee) => (
-            <div>
-              <EmployeeCard employee={employee}/>
-            </div>
-          ))}
-          </div>
-          <div>
-        {employeeInfo &&
-          employeeInfo.map((employee) => (
-            <div>
-              <EmployeeCard employee={employee}/>
-            </div>
-          ))}
+          employeeInfo.map((employee) => 
+              <EmployeeCard key={employee.ID} employee={employee}/>
+          )}
           </div>
     </div>
   )

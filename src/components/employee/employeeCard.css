@@ -1,0 +1,12 @@
+.EmployeeCard {
+    display: flex;
+    flex-direction: row;
+    font-size: var(--fontS);
+    font-family: var(--little-font);
+}
+
+.employeeCard-name {
+    border-bottom: 1px solid lightgrey;
+    width: 100%;
+    margin-bottom: 10px;
+}
