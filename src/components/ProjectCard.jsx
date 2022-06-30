@@ -5,6 +5,7 @@ import moment from 'moment';
 import { useParams } from 'react-router-dom';
 
 const ProjectCard = ({ project, color }) => {
+  
   const start_date = moment(project.start_date).format('MMM Do YY');
   const end_date = moment(project.end_date).format('MMM Do YY');
 
