@@ -36,9 +36,10 @@ const Login = () => {
     onSubmit: (values) => {
       axios
         .post(`${process.env.REACT_APP_API_URL}/employees/login`, values)
-        .then(({ data: { credentials } }) => {
+        .then(({ data: { credentials, id } }) => {
           setUser({
             token: credentials,
+            id: id,
           });
           navigator("/home");
         })
