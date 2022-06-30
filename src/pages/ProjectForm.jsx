@@ -33,15 +33,15 @@ const ProjectForm = () => {
       start_date: startTime,
       end_date: endTime,
       priority: priority,
+      stackOne: dataStackOne.id,
+      stackTwo: dataStackTwo.id,
       status_id: status,
       client_id: client,
       agency_id: dataAgency.id,
-      stackOne: dataStackOne.id,
-      stackTwo: dataStackTwo.id,
       projet_category_id: category,
       project_sector_id: dataActivity.id,
     };
-
+    
     axios
       .post(`${process.env.REACT_APP_API_URL}/projects`)
       .then((res) => {
