@@ -35,7 +35,7 @@ const Login = () => {
     // lors de la soumission du formulaire, on passe les values en paramètre
     onSubmit: (values) => {
       axios
-        .post(`${process.env.REACT_APP_API_URL}/users/login`, values)
+        .post(`${process.env.REACT_APP_API_URL}/employees/login`, values)
         .then(({ data: { credentials } }) => {
           setUser({
             token: credentials,
