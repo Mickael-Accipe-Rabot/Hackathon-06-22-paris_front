@@ -1,6 +1,7 @@
 import React from 'react';
 import "./clientsList.css";
 import ClientCard from '../components/client/ClientCard';
+import { Link } from 'react-router-dom';
 
 const ClientsList = () => {
 
@@ -12,13 +13,9 @@ const ClientsList = () => {
       <h4 className='clientList-location'>Location</h4>
       <h4 className='clientList-sector'>Sector</h4>
       </div>
+          <Link to={"/client-details"} style={{ textDecoration: 'none' , color: "black"}}>
           <div className='clientList-card'><ClientCard/></div>
-          <div className='clientList-card'><ClientCard/></div>
-          <div className='clientList-card'><ClientCard/></div>
-          <div className='clientList-card'><ClientCard/></div>
-          <div className='clientList-card'><ClientCard/></div>
-          <div className='clientList-card'><ClientCard/></div>
-          <div className='clientList-card'><ClientCard/></div>
+          </Link>
         </div>  
     </div>
   )
