@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import "./clientsList.css";
 import ClientCard from '../components/client/ClientCard';
+import CreateClient from '../components/buttons/CreateClient';
 
 const ClientsList = () => {
 
@@ -24,6 +25,7 @@ const ClientsList = () => {
       <h4 className='clientList-name'>Client</h4>
       <h4 className='clientList-location'>Location</h4>
       <h4 className='clientList-sector'>Sector</h4>
+      <CreateClient/>
       </div>
       
           {clients &&
