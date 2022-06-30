@@ -1,0 +1,13 @@
+.projectsList-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap:var(--marginL)
+}
+
+@media screen and (min-width:960px) {
+    .projectsList-container{
+        gap:var(--marginM)
+    }
+}

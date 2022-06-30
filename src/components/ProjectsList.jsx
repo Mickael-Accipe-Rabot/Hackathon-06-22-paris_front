@@ -17,15 +17,21 @@ const ProjectsList = () => {
 
 
   return (
-    <div>
+    <div className='projectsList-container'>
       ProjectsList
-      {projects &&
+      {/* {projects &&
         projects.map((project, index) => (
           <div key={index}>
             {' '}
             <ProjectCard project={project}/>{' '}
           </div>
-        ))}
+        ))} */}
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
     </div>
   );
 };
