@@ -1,27 +1,19 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import "./clientsList.css"
-import ClientDetails from './ClientDetails'
+import React from 'react';
+import "./clientsList.css";
+import ClientCard from '../components/client/ClientCard';
 
 const ClientsList = () => {
-  const [clientInfo, setClientInfo] = useState([]);
 
-  useEffect(() => {
-      axios
-        .get('??')
-        .then((res) => res.data)
-        .then((data) => setClientInfo(data));
-    }, []);
   return (
     <div className='page clientsList-container'>
-        <div>
-        {clientInfo &&
-        clientInfo.map((client) => (
-            <div className="clientCard">
-            <ClientDetails client={client}/>
-            </div>
-        ))}
+      Hello
+        <div className='clientCard'>
+          <clientCard/>
+          <clientCard/>
+          <clientCard/>
+          <clientCard/>
+          <clientCard/>
+          <clientCard/>
         </div>  
     </div>
   )
