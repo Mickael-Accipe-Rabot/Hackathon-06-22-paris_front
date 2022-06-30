@@ -42,38 +42,39 @@
     margin-left: 3rem;
 }
 
-table {
+.projectDetailsInfo table {
     border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
     
 }
 
-th {
+.projectDetailsInfo th {
     color: black;
     text-align: left;
     padding-bottom: 5px;
-    font-size: 14px;
+    font-size: var(--fontS);
     font-weight: 400;
     font-family: var(--big-font);
 
 }
 
-td {
+.projectDetailsInfo td {
     text-align: left;
     word-wrap: break-word;
-    font-size: 12px;
+    font-size: var(--fontS);
     font-weight: 0;
     font-family: var(--little-font);
+    border: none;
 }
 
-h4 {
+.projectDetails-title {
     padding-bottom: 1rem;
 }
 
 .projectDetails-desc {
     font-family: var(--little-font);
-    font-size: 12px;
+    font-size: var(--fontS);
 }
 
 .projectDetails-stackholders {
