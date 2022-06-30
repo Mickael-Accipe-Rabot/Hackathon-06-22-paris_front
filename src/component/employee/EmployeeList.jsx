@@ -27,7 +27,7 @@ const EmployeeList = () => {
           </div>
           <div>
         {employeeInfo &&
-          employeeInfo.map((employee) => (
+          employeeInfo.slice(0.1).map((employee) => (
             <div>
               <EmployeeCard employee={employee}/>
             </div>
