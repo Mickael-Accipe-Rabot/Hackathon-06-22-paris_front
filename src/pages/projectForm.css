@@ -1,0 +1,174 @@
+.page-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 10vh;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: auto;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.add-project {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  margin-top: 30px;
+  color: #e89759;
+}
+
+.flata {
+  width: 250px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.register {
+  width: 80%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input {
+  background-color: #f8f6fa;
+  display: flex;
+  align-items: center;
+  border: 0.0625rem solid #f8f6fa;
+  height: 3rem;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 13px;
+  font-family: "Montserrat";
+  font-style: normal;
+  color: #979191;
+  font-weight: 400;
+}
+
+input::placeholder,
+select::placeholder {
+  color: #979191;
+}
+
+label {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #183650;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.button-addproject {
+  background-color: #e89759;
+  color: #fff;
+  margin-top: 40px;
+  border: 0.0625rem solid #dee1e7;
+  height: 3rem;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.button-addproject:hover {
+    background-color: #db743e;
+  }
+
+select {
+  display: flex;
+  align-items: center;
+  background-color: #f8f6fa;
+  border: 0.0625rem solid #f8f6fa;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: "Montserrat";
+  font-style: normal;
+  color: #979191;
+  font-weight: 400;
+}
+
+textarea {
+  display: flex;
+  align-items: center;
+  background-color: #f8f6fa;
+  border: 0.0625rem solid #f8f6fa;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: "Montserrat";
+  font-style: normal;
+  color: #979191;
+  font-weight: 400;
+  height: 100px;
+  padding: 0.5rem;
+}
+
+/* -----------DESKTOP----------- */
+
+@media screen and (min-width: 960px) {
+  .page-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    gap: 8rem;
+    margin-left: 25vh;
+    margin-top: 3vh;
+  }
+
+  .bloc-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-form {
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    height: auto;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    align-items: center;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+
+  .add-project {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 51px;
+  }
+
+  .flata {
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+}

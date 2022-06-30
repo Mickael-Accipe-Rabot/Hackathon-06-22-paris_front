@@ -1,171 +1,152 @@
 import React from "react";
-import "./projectform.css";
+import "./projectForm.css";
 import axios from "axios";
 import { useState } from "react";
+import flata from "../assets/images/flata.svg";
 
-export const ProjectForm  = () => {
- const [eventName, setEventName] = useState("");
- const [organisator, setOrganisator] = useState("");
- const [date, setDate] = useState("");
- const [hour, setHour] = useState("");
- const [action, setAction] = useState("");
- const [number, setNumber] = useState("");
- const [adress, setAdress] = useState("");
- const [lat, setLat] = useState();
- const [long, setLong] = useState();
- const [zip, setZip] = useState("");
- const [city, setCity] = useState("");
- const [description, setDescription] = useState("");
+const ProjectForm = () => {
+  const [project, setProject] = useState("");
+  const [client, setClient] = useState("");
+  const [agency, setAgency] = useState("");
+  const [activity, setActivity] = useState("");
+  const [description, setDescription] = useState("");
+  const [stacks, setStacks] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
+  const [priority, setPriority] = useState("");
 
- const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  const data = {
-   title: eventName,
-   author: organisator,
-   start_date: date,
-   start_hour: hour,
-   type: action,
-   street_number: number,
-   street_name: adress,
-   zip_code: zip,
-   city: city,
-   country: "France",
-   description: description,
+    const data = {
+      project: project,
+      client: client,
+      agency: agency,
+      activity: activity,
+      description: description,
+      stacks: stacks,
+      startTime: startTime,
+      endTime: endTime,
+      priority: priority,
+    };
+
+    axios
+      .post("http://localhost:8000/api/project", data)
+      .then((res) => {
+        console.log(res.data);
+        window.location = "/";
+      })
+      .catch((err) => console.log(err));
   };
 
-  axios
-   .post("http://localhost:8000/api/actions", data)
-   .then((res) => {
-    console.log(res.data);
-    window.location = "/";
-   })
-   .catch((err) => console.log(err));
- };
+  return (
+    <div className="page-container page">
+      <div className="bloc-title">
+        <div className="add-project">CREATE A NEW PROJECT</div>
+        <img src={flata} className="flata" />
+      </div>
+      <div className="container-form">
+        <form onSubmit={(e) => handleSubmit(e)} className="form">
+          <label htmlFor="name">Project title</label>
+          <input
+            placeholder="Enter a project title"
+            type="text"
+            required
+            value={project}
+            onChange={(e) => setProject(e.target.value)}
+          />
 
- return (
-  <div className="event">
-   <div className="">Add a project</div>
-   <form onSubmit={(e) => handleSubmit(e)} className="form">
-    <input
-     placeholder="Nom de l'événement"
-     type="text"
-     required
-     value={eventName}
-     onChange={(e) => setEventName(e.target.value)}
-     className=""
-    />
+          <label htmlFor="name">Client name</label>
+          <input
+            placeholder="Enter a client name"
+            type="text"
+            required
+            value={client}
+            onChange={(e) => setClient(e.target.value)}
+          />
 
-    <input
-     placeholder="Organisateur"
-     type="text"
-     required
-     value={organisator}
-     onChange={(e) => setOrganisator(e.target.value)}
-     className=""
-    />
+          <label htmlFor="name">Agency</label>
+          <input
+            placeholder="Enter an agency"
+            type="text"
+            required
+            value={agency}
+            onChange={(e) => setAgency(e.target.value)}
+          />
 
-    <select
-     placeholder="Type d'action"
-     type="text"
-     required
-     value={action}
-     onChange={(e) => setAction(e.target.value)}
-     className=""
-    >
-     <option value="Ecoaction">Type d'Eco Event</option>
-     <option value="Dépollution">Dépollution</option>
-     <option value="Nettoyage">Nettoyage</option>
-     <option value="Réparation">Réparation</option>
-     <option value="Recyclage">Recyclage</option>
-     <option value="Collecte">Collecte</option>
-     <option value="Don">Don</option>
-    </select>
+          <label htmlFor="name">Activity</label>
+          <input
+            placeholder="Enter an activity"
+            type="textarea"
+            required
+            value={activity}
+            onChange={(e) => setActivity(e.target.value)}
+          />
 
-    <input
-     placeholder="date"
-     type="date"
-     required
-     value={date}
-     onChange={(e) => setDate(e.target.value)}
-     className=""
-    />
+          <label htmlFor="name">Description</label>
+          <textarea
+            placeholder="Enter a description"
+            type="textarea"
+            required
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
 
-    <input
-     placeholder="Heure de l'évènement"
-     type="time"
-     required
-     value={hour}
-     onChange={(e) => setHour(e.target.value)}
-     className=""
-    />
+          <label htmlFor="name">Stacks</label>
+          <select
+            placeholder="Select a stack"
+            type="text"
+            required
+            value={stacks}
+            onChange={(e) => setStacks(e.target.value)}
+          >
+            <option value="Ecoaction">Type d'Eco Event</option>
+            <option value="Dépollution">Dépollution</option>
+            <option value="Nettoyage">Nettoyage</option>
+            <option value="Réparation">Réparation</option>
+            <option value="Recyclage">Recyclage</option>
+            <option value="Collecte">Collecte</option>
+            <option value="Don">Don</option>
+          </select>
 
-    <input
-     placeholder="Numéro de rue"
-     type="text"
-     required
-     value={number}
-     onChange={(e) => setNumber(e.target.value)}
-     className=""
-    />
+          <label htmlFor="name">Start date</label>
+          <input
+            placeholder="DD/MM/YYYY"
+            type="date"
+            required
+            value={startTime}
+            onChange={(e) => setStartTime(e.target.value)}
+          />
 
-    <input
-     placeholder="Nom de rue"
-     type="text"
-     required
-     value={adress}
-     onChange={(e) => setAdress(e.target.value)}
-     className=""
-    />
+          <label htmlFor="name">End date</label>
+          <input
+            placeholder="DD/MM/YYYY"
+            type="date"
+            required
+            value={endTime}
+            onChange={(e) => setEndTime(e.target.value)}
+          />
 
-    <input
-     placeholder="Code postal"
-     type="number"
-     required
-     value={zip}
-     onChange={(e) => setZip(e.target.value)}
-     className=""
-    />
+          <label htmlFor="name">Priority</label>
+          <select
+            placeholder="Select a priority project"
+            type="select"
+            required
+            value={priority}
+            onChange={(e) => setPriority(e.target.value)}
+          >
+            <option value="Ecoaction">Type d'Eco Event</option>
+            <option value="Dépollution">Dépollution</option>
+            <option value="Nettoyage">Nettoyage</option>
+          </select>
 
-    <input
-     placeholder="Ville"
-     type="text"
-     required
-     value={city}
-     onChange={(e) => setCity(e.target.value)}
-     className=""
-    />
-
-    <input
-     placeholder="Latitude"
-     type="number"
-     required
-     value={lat}
-     onChange={(e) => setLat(e.target.value)}
-     className=""
-    />
-
-    <input
-     placeholder="Longitude"
-     type="number"
-     required
-     value={long}
-     onChange={(e) => setLong(e.target.value)}
-     className=""
-    />
-
-    <textarea
-     placeholder="Message"
-     type="textarea"
-     value={description}
-     onChange={(e) => setDescription(e.target.value)}
-     className=""
-    />
-
-    <button onClick={handleSubmit} className="">
-     Create
-    </button>
-   </form>
-  </div>
- );
+          <button onClick={handleSubmit} className="button-addproject">
+            Create
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 };
+
+export default ProjectForm;
