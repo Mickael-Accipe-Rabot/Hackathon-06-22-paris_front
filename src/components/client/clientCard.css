@@ -1,0 +1,33 @@
+.ClientCardContent {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    gap: 20rem;
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-family: var(--little-font);
+    font-size: 12px;
+    width: 90%;
+    height: 4rem;
+    margin-left: 3rem;
+}
+
+.ClientCardContent:hover {
+    box-shadow: 1px 0px 1px 1px var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.client-name {
+    width: 50%;
+}
+
+.client-city {
+    width: 25%;
+}
+
+.client-category {
+    width: 25%;
+}

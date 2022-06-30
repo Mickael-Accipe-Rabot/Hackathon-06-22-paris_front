@@ -1,0 +1,106 @@
+
+.projectInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 85%;
+    height: 5rem;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    border-radius: 5px;
+}
+
+.projectDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    width: 50%;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 3rem;
+    border-radius: 5px;
+}
+
+.project-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10rem;
+    margin-bottom: 2rem;
+    width: 90%;
+}
+
+.project-name {
+    color: var(--secondary-color);
+    font-family: var( --big-font);
+    font-size: var(--fontL);
+    margin-left: 3rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    
+}
+
+th {
+    color: black;
+    text-align: left;
+    padding-bottom: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--big-font);
+
+}
+
+td {
+    text-align: left;
+    word-wrap: break-word;
+    font-size: 12px;
+    font-weight: 0;
+    font-family: var(--little-font);
+}
+
+h4 {
+    padding-bottom: 1rem;
+}
+
+.project-desc {
+    font-family: var(--little-font);
+    font-size: 12px;
+}
+
+.project-stackholders {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    width: 50%;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 3rem;
+    border-radius: 5px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+
+.project-link {
+    margin-left: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-family: var(--little-font);
+    font-size: 10px;
+    color: gray;
+    text-decoration: none;
+}

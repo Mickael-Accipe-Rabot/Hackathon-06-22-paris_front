@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Montserrat:wght@800&display=swap');
 
 *{
   margin:0;
@@ -7,6 +7,8 @@
 }
           /* VARIABLES */
 :root{
+
+
   /* colors */
   --font-color: #ffffff;
   --primary-color: #183650;
@@ -18,6 +20,11 @@
   --box-shadow:0 5px 10px rgba(0, 0, 0, 0.432);
   --container-br-S: 4px;
   --container-br-L: 8px;
+
+  /* fonts */
+  --little-font:'Hind', sans-serif;
+  --big-font:'Montserrat', sans-serif;
+
   /* fonts sizes */
   --fontS:1rem;
   --fontM:2rem;
@@ -32,6 +39,7 @@
   --marginXL: 4rem;
 
   /* padding sizes */
+  --paddingXS:.5rem;
   --paddingS: 1rem;
   --paddingM: 2rem;
   --paddingL: 3rem;
@@ -43,18 +51,18 @@
   --transition3:ease-in-out 1000ms;
 
   /* input */
-  --input-br:10px;
-  --input-shadow:0 0 10px rgba(0, 0, 0, 0.212);
-  --input-inset-shadow:inset 0 -5px 10px rgba(0, 0, 0, 0.212);
-  --input-h:1.5rem;
-  --input-w:10rem;
+  --input-br:8px;
+  --input-shadow:0 0 0px rgba(0, 0, 0, 0);
+  --input-inset-shadow:inset 0 0px 0px rgba(0, 0, 0, 0);
+  --input-h:3.43rem;
+  --input-w:25rem;
 
   /* button */
-  --btn-br:10px;
+  --btn-br:8px;
   --btn-shadow:0 0 10px rgba(0, 0, 0, 0.212);
-  --btn-hover-shadow:0 0 10px rgba(0, 0, 0, 0.212);
-  --btn-h: 1.5rem;
-  --btn-w:6rem;
+  --btn-hover-shadow:0 0 0px rgba(0, 0, 0, 0);
+  --btn-h: 3.43rem;
+  --btn-w:9rem;
 }
 
 /* -----------SET----------- */
@@ -63,9 +71,15 @@
   min-height: 100vh;
 }
 
+body {
+  overflow: hidden;
+  font-family: var(--big-font);
+}
+
 /* className="page" (A mettre dans la div parente de chaque composant page! */
 .page{
   margin:5rem 0 0 0;
+  min-height: 100vh;
   background-color: #F9F9F9;
 }
 
@@ -79,21 +93,26 @@ h3{
   font-size: var(--fontM);
 }
 
+p{
+  font-family: var(--little-font);
+}
+
 
 /* className="btn" */
 .btn{
 width: var(--btn-w);
 height:var(--btn-h);
-color: var(--primary-color);
+color: var(--light-color);
 background-color: var(--secondary-color);
-font-size: var(--fontM);
+font-size: var(--fontS);
 border-radius: var(--btn-br);
-box-shadow: var(--btn-shadow);
+/* box-shadow: var(--btn-shadow); */
 transition:var(--transition2);
+border:none;
 }
 .btn:hover{
-  background-color: var(--primary-color);
-  color:var(--tertiary-color);
+  background-color: var(--light-color);
+  color:var(--secondary-color);
 }
 
 /* className="inpt" */
@@ -101,8 +120,12 @@ transition:var(--transition2);
   width:var(--input-w);
   height:var(--input-h);
   border-radius: var(--input-br);
-  box-shadow: var(--input-inset-shadow),var(--input-shadow);
-  padding:var(--paddingM)
+  padding:var(--paddingS);
+  font-size: 1rem;
+  background-color: var(--light-color);
+}
+.inpt::placeholder{
+  color: #979191;
 }
 
 /* -----------TABLET----------- */

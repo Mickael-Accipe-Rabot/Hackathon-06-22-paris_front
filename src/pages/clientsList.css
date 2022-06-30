@@ -1,0 +1,26 @@
+.ClientCard-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20rem;
+    color: gray;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    font-family: var( --big-font);
+    font-size: 14px;
+    width: 95%;
+    margin-left: 3rem;
+}
+
+.clientList-name {
+    width: 50%;
+}
+
+.clientList-location {
+    width: 25%;
+}
+
+.clientList-sector {
+    width: 50%;
+}

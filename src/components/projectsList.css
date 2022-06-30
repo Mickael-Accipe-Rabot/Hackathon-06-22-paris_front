@@ -2,12 +2,49 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     /* align-items: center; */
     gap:var(--marginL)
 }
 
 @media screen and (min-width:960px) {
     .projectsList-container{
-        gap:var(--marginM)
+        gap:var(--marginS);
+        align-items: center;
+    }
+    .Projects-subMenu{
+        position: relative;
+        width:90%;
+        height:3rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        background-color: #F5F5F5;  
+    }
+    .Projects-subMenu li{
+        width:25%;
+    }
+    .subMenu-Title{
+        width:25%;
+    }
+    .subMenu-infos{
+        width:25%;
+        text-align: center;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap:2rem;
+        /* margin: 0 0 0 25%; */
+    }
+    .subMenu-stacks{
+        display:flex;
+        justify-content:start;
+    }
+    .subMenu-status{
+        display: flex;
+        flex-direction: row-reverse;
+        position:absolute;
+        right:1rem;
     }
 }

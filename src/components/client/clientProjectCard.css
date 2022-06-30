@@ -1,0 +1,31 @@
+.clientProject-data {
+    display: flex;
+    flex-direction: row;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+th {
+    color: black;
+    text-align: left;
+    width: 20%;
+    padding-bottom: 5px;
+    padding-top: 1rem;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: var(--big-font);
+}
+
+td {
+    text-align: left;
+    word-wrap: break-word;
+    font-size: 10px;
+    font-weight: 0;
+    font-family: var(--little-font);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid lightgray;
+}
