@@ -16,8 +16,7 @@ const ProjectDetails = () => {
         .then((res) => res.data)
         .then((data) => setProjectInfo(data));
     }, [projectID]);
-
-console.log(projectInfo);
+    
   return (
 
     <div className='page projectDetails-container'>
