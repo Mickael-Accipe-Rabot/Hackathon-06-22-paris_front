@@ -1,19 +1,25 @@
 .projectCard-container {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-radius: var(--container-br-L);
-  /* padding: 1rem; */
   border: solid 1px #c0c0c0;
   margin: 0;
+  text-decoration: none;
+  color:black;
 }
+.projectCard-container div:first-child{
+ display: flex;
+ justify-content: flex-start;
+}
+
 .projectCard-container > * {
   width: 100%;
   padding: var(--paddingXS);
   height: 100%;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +27,14 @@
   /* margin:var(--marginXS); */
   border-radius: var(--container-br-L);
 }
-
+.project-card{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
 .project-img {
   width: 3rem;
   height: 3rem;
@@ -60,7 +73,7 @@
   background-color: var(--secondary-color);
   color: var(--light-color);
 }
-.status-tag{
+/* .status-tag{
   display: flex;
   color: var(--light-color);
   align-items: center;
@@ -68,27 +81,40 @@
   background-color:#5AB94B ;
   padding: var(--paddingXS);
   height:2rem ;
-}
-.status-tag-over{
+} */
+
+.c-status{
   display: flex;
-  color: var(--light-color);
+  flex-direction: row-reverse;
   align-items: center;
+  position:absolute;
+  right:1rem;
+  top:2.15rem;
   border-radius:8px;
-  background-color:#D83737 ;
-  padding: var(--paddingXS);
-  height:2rem ;
+  color: var(--light-color);
+  padding:0 var(--paddingXS);
 }
+
+
 @media screen and (min-width: 960px) {
+  /* width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 2rem; */
+    .project-card{
+      flex-direction: row;
+    }
   .projectCard-container {
     position: relative;
-    justify-content: space-evenly;
-    width: 90%;
+    justify-content: flex-start;
+    width: 100%;
     display: flex;
     flex-direction: row;
     height: 6rem;
     border:none;
     transition: var(--transition1);
-    background-color: #ffffff;
+     background-color: #FFFFFF;
   }
   
   .projectCard-container:hover{
@@ -96,7 +122,7 @@
     box-shadow:0 4px 10px rgba(0, 0, 0, 0.15);
   }
   .project-title{
-    width:25%;
+    width:30%;
   }
   .client-infos{
     text-align: initial;
@@ -111,10 +137,12 @@
   }
   .stacks-container{
     width:25%;
+    margin:2rem;
   }
   .status-tag{
     position: absolute;
     right:1rem;
+    /* top:1rem; */
   }
   /* .projectCard-container{
     display: grid;

@@ -1,50 +1,83 @@
 .projectsList-container{
+    width:90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     /* align-items: center; */
-    gap:var(--marginL)
+    gap:var(--marginL);
+    background-color: #F9F9F9;
 }
+.design-status{
+    background-color:#849AFD ;
+  }
+  .deploy-status{
+    background-color:#933EB0 ;
+  }
+  .dev-status{
+    background-color:#58B49C ;
+  }
+  .test-status{
+    background-color:#EAC234;
+  }
+  .Projects-subMenu{
+      display:none;
+  }
 
 @media screen and (min-width:960px) {
     .projectsList-container{
         gap:var(--marginS);
         align-items: center;
     }
+
+    /* ////////////////BARRE AU DESSUS DES TUILES ///////////////// */
     .Projects-subMenu{
+        display: block;
         position: relative;
-        width:90%;
+        width:100%;
         height:3rem;
+        padding:     0 2rem;;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         list-style: none;
-        background-color: #F5F5F5;  
+        background-color: #eeeeee;  
+        border-radius: 8px;
+        color:rgb(154, 154, 154);
     }
     .Projects-subMenu li{
-        width:25%;
+        /* width:25%; */
     }
     .subMenu-Title{
-        width:25%;
+        /* width:25%; */
     }
     .subMenu-infos{
-        width:25%;
+        /* width:35%; */
         text-align: center;
         display: flex;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
-        gap:2rem;
-        /* margin: 0 0 0 25%; */
+        gap:1rem;
+        /* gap:2rem; */
+        margin: 0 0 0 18%;
     }
     .subMenu-stacks{
         display:flex;
-        justify-content:start;
+        justify-content:center;
+        margin: 0  10% 0 0;
+        
     }
-    .subMenu-status{
+    li.subMenu-status{
+        display: flex;
+        flex-direction: row;
+        /* position:absolute; */
+        right:1rem;
+        color:rgb(154, 154, 154);
+    }
+    .design-status{
         display: flex;
         flex-direction: row-reverse;
-        position:absolute;
-        right:1rem;
+        /* position:absolute; */
+        /* right:1rem; */
     }
 }

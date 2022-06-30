@@ -9,6 +9,7 @@
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
   font-weight: bold;
+  z-index: 1000;
 }
 .navbar-list {
   display: flex;
@@ -34,6 +35,7 @@
   width: 4rem;
   color: var(--font-color);
   transition: var(--transition2);
+  color:var(--light-color);
 }
 
 .navbar-user {

@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './home.css';
 import ProjectsList from '../components/ProjectsList';
+import UserProvider from '../context/UserProvider';
+
 const Home = () => {
   return (
     <div className="page home-container">
-      <h1>Projets</h1>
+      <h2 className='home-title'>Welcome ...context...</h2>
       
       <ProjectsList />
     </div>
