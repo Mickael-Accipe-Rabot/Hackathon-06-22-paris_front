@@ -1,9 +1,21 @@
-import React from 'react'
-import './clientsList.css'
+import React from 'react';
+import "./clientsList.css";
+import ClientCard from '../components/client/ClientCard';
 
 const ClientsList = () => {
+
   return (
-    <div className='page clientsList-container'><h1>ClientsList</h1></div>
+    <div className='page clientsList-container'>
+      Hello
+        <div className='clientCard'>
+          <clientCard/>
+          <clientCard/>
+          <clientCard/>
+          <clientCard/>
+          <clientCard/>
+          <clientCard/>
+        </div>  
+    </div>
   )
 }
 
