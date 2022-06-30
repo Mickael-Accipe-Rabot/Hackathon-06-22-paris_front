@@ -36,7 +36,6 @@ const Login = () => {
     onSubmit: (values) => {
       axios
         .post(`${process.env.REACT_APP_API_URL}/employees/login`, values)
-        .then(console.log(`${process.env.REACT_APP_API_URL}/employees/login`))
         .then(({ data: { credentials } }) => {
           setUser({
             token: credentials,
