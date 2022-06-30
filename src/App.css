@@ -28,7 +28,7 @@
 
   /* fonts sizes */
   --fontS:1rem;
-  --fontM:2rem;
+  --fontM:1.5rem;
   --fontL:3rem;
   --fontXL:4rem;
 
@@ -136,6 +136,6 @@ border:none;
 /* -----------DESKTOP----------- */
 @media screen and (min-width:960px) {
   .page{
-    margin: 0 0 0 8rem;
+    margin: 0 0 0 11rem;
   }
 }
