@@ -1,28 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "./coursesDetails.css"
-im
+import CoursesProjectCard from '../components/courses/CoursesProjectCard';
+import EmailIcon from '@mui/icons-material/Email';
+import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 
 const coursesDetails = () => {
-const [coursesInfo, setCoursesInfo] = useState([]);
-  const { coursesID } = useParams();
-
-  useEffect(() => {
-      axios
-        .get(`http://localhost:8000/api/courseslist/${coursesID}`)
-        .then((res) => res.data)
-        .then((data) => setClientInfo(data));
-    }, [coursesID]);
   return (
     <div className='coursesDetails'>
-         <Link to="/clientslist">
-      <p className='clientDetails-link'> Back to clients </p> 
+         <Link to="/courses">
+      <p className='clientDetails-link'> Back to courses </p> 
       </Link>
-      {clientInfo &&
       <div className='clientDetails-content'>
-        <h1 className='clientDetails-name'>{coursesInfo.name}</h1>
+        <h1 className='clientDetails-name'>Workshop: Javascript</h1>
       <div className='clientDetails-personalInfo'>
-        <p className='clientDetails-personalInfoTitle'><LocationOnIcon style={{ color: "#DB743E" }}/> {coursesInfo.city}</p>
-        <p className='clientDetails-personalInfoTitle'><EmailIcon style={{ color: "#DB743E" }}/> {coursesInfo.email}</p>
+        <p className='clientDetails-personalInfoTitle'><AccessibilityNewIcon style={{ color: "#DB743E" }}/>Catherine Dupont</p>
+        <p className='clientDetails-personalInfoTitle'><EmailIcon style={{ color: "#DB743E" }}/>catherine.dupont@apside.com</p>
         </div>
 
       <div className='clientDetails-description'>
@@ -32,12 +25,9 @@ const [coursesInfo, setCoursesInfo] = useState([]);
 
       <div className='clientDetails-project'>
         <h2 className='clientDetails-title'>Projects</h2>
-       <div className='clientDetails-card'> <ClientProjectCard clientID={clientID}/> </div>
+       <div className='clientDetails-card'> <CoursesProjectCard /> </div>
       </div>
       </div>
-}
-
-
     </div>
   )
 }
