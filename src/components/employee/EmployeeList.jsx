@@ -10,11 +10,11 @@ const EmployeeList = () => {
 
     useEffect(() => {
         axios
-          .get('??')
+          .get('http://localhost:8000/api/employees')
           .then((res) => res.data)
           .then((data) => setEmployeeInfo(data));
       }, []);
-
+      console.log(employeeInfo);
   return (
     <div className='EmployeeList'>
         <div>
@@ -27,7 +27,7 @@ const EmployeeList = () => {
           </div>
           <div>
         {employeeInfo &&
-          employeeInfo.slice(0.1).map((employee) => (
+          employeeInfo.map((employee) => (
             <div>
               <EmployeeCard employee={employee}/>
             </div>

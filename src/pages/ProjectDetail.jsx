@@ -11,7 +11,7 @@ const ProjectDetails = () => {
 
   useEffect(() => {
       axios
-        .get('??')
+        .get('http://localhost:8000/api/projects')
         .then((res) => res.data)
         .then((data) => setProjectInfo(data));
     }, []);
@@ -20,31 +20,41 @@ const ProjectDetails = () => {
 
     <div className='page projectDetails-container'>
       <Link to="/home">
-      <p> Back to projects </p> 
+      <p className='project-link'> Back to projects </p> 
       </Link>
     {projectInfo &&
         projectInfo.map((project) => (
           <div>
-    <h1>{project.name}</h1>
+        <div className='project-head'> 
+    <h1 className='project-name'>{project.name}</h1>
     <ShowInterest />
-     <div className='projectInfo'>
-        <h4>Client</h4>
-        <p>{project.clientName}</p>
-        <h4>Date Created</h4>
-        <p>{project.date}</p>
-        <h4>Deadline</h4>
-        <p>{project.duration}</p>
-        <h4>Stack</h4>
-        <p>{project.stack}</p>
-        <h4>Priority</h4>
-        <p>{project.priority}</p>
-        <h4>Status</h4>
-        <p>{project.status}</p> 
+        </div>
+      <div className='projectInfo'>
+        <table>
+          <thead>
+            <tr>
+              <th>Clients</th>
+              <th>Date Created</th>
+              <th>Deadline</th>
+              <th>Stack</th>
+              <th>Priority</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <td>{project.client_id}</td>
+            <td>{project.start_date}</td>
+            <td>{project.end_date}</td>
+            <td>React-PHP</td>
+            <td>{project.priority}</td>
+            <td>{project.status_id}</td>
+          </tbody>
+        </table>
       </div>
       
       <div className='projectDesc'>
         <h4>Description</h4>
-        <p>{project.description}</p>
+        <p className='project-desc'>{project.description}</p>
       </div>
           
     </div>
