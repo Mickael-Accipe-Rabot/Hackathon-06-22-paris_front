@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { Navigate } from 'react-router-dom';
-import { useUser } from '../../contexts/UserProvider';
+import { useUser } from '../context/UserProvider';
 
 const Disconnect = () => {
   const { setUser } = useUser();
@@ -10,7 +9,7 @@ const Disconnect = () => {
     setUser(null)
   }, [])
 
-  return <Navigate to="/" />
+  return true;
 }
 
 export default Disconnect

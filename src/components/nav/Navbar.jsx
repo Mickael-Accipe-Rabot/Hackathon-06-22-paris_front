@@ -3,10 +3,17 @@ import logowhite from '../../assets/images/logowhite.svg'
 import './navbar.css';
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import Disconnect from '../Disconnect';
+
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+
+  const OnLogout = () => {
+    handleClick();
+    <Disconnect />
+  } 
 
   return (
     <div className="navbar-container">
@@ -30,7 +37,18 @@ const Navbar = () => {
             }
             onClick={handleClick}
           >
-            Projets
+            Projects
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="./courses"
+            className={(navData) =>
+              navData.isActive ? 'active nav-links' : 'nav-links'
+            }
+            onClick={handleClick}
+          >
+            Courses
           </NavLink>
         </li>
         <li>
@@ -43,6 +61,18 @@ const Navbar = () => {
           >
             Clients
           </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="./"
+            className={(navData) =>
+              navData.isActive ? 'active nav-links' : 'nav-links'
+            }
+            onClick={OnLogout} 
+          >
+            Logout
+          </NavLink>
+          
         </li>
       </ul>
 
