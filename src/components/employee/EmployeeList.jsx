@@ -4,13 +4,14 @@ import axios from 'axios'
 import "./employeeList.css"
 import EmployeeCard from './EmployeeCard'
 
-const EmployeeList = () => {
+const EmployeeList = ({ projectID }) => {
 
     const [employeeInfo, setEmployeeInfo] = useState([]);
+  
 
     useEffect(() => {
         axios
-          .get('http://localhost:8000/api/employees')
+          .get(`http://localhost:8000/api/project-employees/${projectID}`)
           .then((res) => res.data)
           .then((data) => setEmployeeInfo(data));
       }, []);
@@ -19,9 +20,8 @@ const EmployeeList = () => {
     <div className='EmployeeList'>
         <div>
         {employeeInfo &&
-          employeeInfo.map((employee) => 
-              <EmployeeCard key={employee.ID} employee={employee}/>
-          )}
+              <EmployeeCard key={employeeInfo.ID} employeeInfo={employeeInfo}/>
+          }
           </div>
     </div>
   )
