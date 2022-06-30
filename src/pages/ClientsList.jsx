@@ -1,9 +1,21 @@
 import React from 'react';
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import "./clientsList.css";
 import ClientCard from '../components/client/ClientCard';
-import { Link } from 'react-router-dom';
 
 const ClientsList = () => {
+
+  const [clients, setClients] = useState([]);
+
+
+  useEffect(() => {
+      axios
+        .get('http://localhost:8000/api/clients')
+        .then((res) => res.data)
+        .then((data) => setClients(data));
+    }, []);
+
 
   return (
     <div className='page clientsList-container'>
@@ -13,11 +25,13 @@ const ClientsList = () => {
       <h4 className='clientList-location'>Location</h4>
       <h4 className='clientList-sector'>Sector</h4>
       </div>
-          <Link to={"/client-details"} style={{ textDecoration: 'none' , color: "black"}}>
-          <div className='clientList-card'><ClientCard/></div>
-          </Link>
+      
+          {clients &&
+        clients.map((client) => (
+            <ClientCard client={client}/> 
+           ))}
+        </div>
         </div>  
-    </div>
   )
 }
 
