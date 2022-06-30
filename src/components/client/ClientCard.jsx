@@ -8,7 +8,7 @@ const ClientCard = () => {
 
   useEffect(() => {
       axios
-        .get('??')
+        .get('http://localhost:8000/api/clients')
         .then((res) => res.data)
         .then((data) => setClientCardInfo(data));
     }, []);
@@ -17,13 +17,13 @@ const ClientCard = () => {
     <div className='ClientCard'>
 {clientCardInfo &&
         clientCardInfo.map((client) => (
+          <div>
      <div className='ClientCardContent'>
-        <h4>Client</h4>
-        <p>{client.clientName}</p>
-        <h4>Location</h4>
-        <p>{client.location}</p>
-        <h4>Sector</h4>
-        <p>{client.sector}</p> 
+        <p className='client-name'>{client.name}</p>
+        <p className='client-city'>{client.city}</p>
+        <p className='client-category'>{client.category_id}</p> 
+      </div>
+
       </div>
     ))}
     </div>

@@ -1,0 +1,29 @@
+.ClientCard-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20rem;
+    color: gray;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-family: var( --big-font);
+    font-size: 14px;
+}
+
+.clientList-name {
+    width: 50%;
+}
+
+.clientList-location {
+    width: 25%;
+}
+
+.clientList-sector {
+    width: 50%;
+}
+
+.clientList-card:hover {
+box-shadow: 3px 3px 3px 3px black;
+transition: var(--transition1);
+cursor: pointer;
+}
