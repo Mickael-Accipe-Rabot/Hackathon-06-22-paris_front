@@ -1,43 +1,83 @@
 import React from "react";
 import "./projectForm.css";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import flata from "../assets/images/flata.svg";
 
 const ProjectForm = () => {
+  const [dataAgencies, setDataAgencies] = useState([]);
+  const [dataActivities, setDataActivities] = useState([]);
+  const [dataStacksOne, setDataStacksOne] = useState([]);
+  const [dataStacksTwo, setDataStacksTwo] = useState([]);
   const [project, setProject] = useState("");
-  const [client, setClient] = useState("");
-  const [agency, setAgency] = useState("");
-  const [activity, setActivity] = useState("");
   const [description, setDescription] = useState("");
-  const [stacks, setStacks] = useState("");
+  const [secret, setSecret] = useState("");
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [priority, setPriority] = useState("");
+  const [status, setStatus] = useState("");
+  const [client, setClient] = useState("");
+  const [dataAgency, setDataAgency] = useState("");
+  const [dataStackOne, setDataStackOne] = useState("");
+  const [dataStackTwo, setDataStackTwo] = useState("");
+  const [category, setCategory] = useState("");
+  const [dataActivity, setDataActivity] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const data = {
-      project: project,
-      client: client,
-      agency: agency,
-      activity: activity,
+      name: project,
       description: description,
-      stacks: stacks,
-      startTime: startTime,
-      endTime: endTime,
+      secret: secret,
+      start_date: startTime,
+      end_date: endTime,
       priority: priority,
+      status_id: status,
+      client_id: client,
+      agency_id: dataAgency.id,
+      stackOne: dataStackOne.id,
+      stackTwo: dataStackTwo.id,
+      projet_category_id: category,
+      project_sector_id: dataActivity.id,
     };
 
     axios
-      .post("http://localhost:8000/api/project", data)
+      .post(`${process.env.REACT_APP_API_URL}/projects`)
       .then((res) => {
         console.log(res.data);
-        window.location = "/";
+        window.location = "/Home";
       })
       .catch((err) => console.log(err));
   };
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/agencies`)
+      .then((res) => res.data)
+      .then((data) => setDataAgencies(data));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/project-sector`)
+      .then((res) => res.data)
+      .then((data) => setDataActivities(data));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/skill`)
+      .then((res) => res.data)
+      .then((data) => setDataStacksOne(data));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/skill`)
+      .then((res) => res.data)
+      .then((data) => setDataStacksTwo(data));
+  }, []);
 
   return (
     <div className="page-container page">
@@ -56,32 +96,99 @@ const ProjectForm = () => {
             onChange={(e) => setProject(e.target.value)}
           />
 
-          <label htmlFor="name">Client name</label>
-          <input
-            placeholder="Enter a client name"
-            type="text"
-            required
-            value={client}
-            onChange={(e) => setClient(e.target.value)}
-          />
+          <div className="bloc-date">
+            <div className="bloc-date-start">
+              <label htmlFor="name">Confidential</label>
+              <select
+                placeholder="Select type"
+                type="text"
+                required
+                value={secret}
+                onChange={(e) => setSecret(e.target.value)}
+              >
+                <option value="1">Yes</option>
+                <option value="2">Not</option>
+              </select>
+            </div>
 
-          <label htmlFor="name">Agency</label>
-          <input
-            placeholder="Enter an agency"
-            type="text"
-            required
-            value={agency}
-            onChange={(e) => setAgency(e.target.value)}
-          />
+            <div className="bloc-date-start">
+              <label htmlFor="name">Category</label>
+              <select
+                placeholder="Select a category"
+                type="text"
+                required
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+              >
+                <option value="1">Client</option>
+                <option value="2">Internal project</option>
+                <option value="1">Courses</option>
+              </select>
+            </div>
+          </div>
 
-          <label htmlFor="name">Activity</label>
-          <input
-            placeholder="Enter an activity"
-            type="textarea"
-            required
-            value={activity}
-            onChange={(e) => setActivity(e.target.value)}
-          />
+          <div className="bloc-date">
+            <div className="bloc-date-start">
+              <label htmlFor="name">Client name</label>
+              <input
+                placeholder="Enter a client name"
+                type="text"
+                required
+                value={client}
+                onChange={(e) => setClient(e.target.value)}
+              />
+            </div>
+
+            <div className="bloc-date-start">
+              <label htmlFor="name">Status</label>
+              <select
+                placeholder="Select a status"
+                type="text"
+                required
+                value={status}
+                onChange={(e) => setStatus(e.target.value)}
+              >
+                <option value="1">Design</option>
+                <option value="2">Developpement</option>
+                <option value="1">Testing</option>
+                <option value="2">Deployed</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="bloc-date">
+            <div className="bloc-date-start">
+              <label htmlFor="name">Agency</label>
+              <select
+                placeholder="Enter an agency"
+                type="text"
+                required
+                value={dataAgency}
+                onChange={(e) => setDataAgency(e.target.value)}
+              >
+                {dataAgencies &&
+                  dataAgencies.map((dataAgency) => (
+                    <option key={dataAgency.id}>{dataAgency.name}</option>
+                  ))}
+              </select>
+            </div>
+
+            <div className="bloc-date-start">
+              <label htmlFor="name">Activity</label>
+              <select
+                placeholder="Enter an activity"
+                type="textarea"
+                required
+                value={dataActivity}
+                onChange={(e) => setDataActivity(e.target.value)}
+              >
+                {dataActivities &&
+                  dataActivities.map((dataActivity) => (
+                    <option key={dataActivity.id}>{dataActivity.name}</option>
+                  ))}
+              </select>
+            </div>
+          </div>
 
           <label htmlFor="name">Description</label>
           <textarea
@@ -92,40 +199,63 @@ const ProjectForm = () => {
             onChange={(e) => setDescription(e.target.value)}
           />
 
-          <label htmlFor="name">Stacks</label>
-          <select
-            placeholder="Select a stack"
-            type="text"
-            required
-            value={stacks}
-            onChange={(e) => setStacks(e.target.value)}
-          >
-            <option value="Ecoaction">Type d'Eco Event</option>
-            <option value="Dépollution">Dépollution</option>
-            <option value="Nettoyage">Nettoyage</option>
-            <option value="Réparation">Réparation</option>
-            <option value="Recyclage">Recyclage</option>
-            <option value="Collecte">Collecte</option>
-            <option value="Don">Don</option>
-          </select>
+          <div className="bloc-date">
+            <div className="bloc-date-start">
+              <label htmlFor="name">Front Stack</label>
+              <select
+                placeholder="Select a stack"
+                type="text"
+                required
+                value={dataStackOne}
+                onChange={(e) => setDataStackOne(e.target.value)}
+              >
+                {dataStacksOne &&
+                  dataStacksOne.map((dataStackOne) => (
+                    <option key={dataStackOne.id}>{dataStackOne.name}</option>
+                  ))}
+              </select>
+            </div>
 
-          <label htmlFor="name">Start date</label>
-          <input
-            placeholder="DD/MM/YYYY"
-            type="date"
-            required
-            value={startTime}
-            onChange={(e) => setStartTime(e.target.value)}
-          />
+            <div className="bloc-date-start">
+              <label htmlFor="name">Back Stack</label>
+              <select
+                placeholder="Select a stack"
+                type="text"
+                required
+                value={dataStackTwo}
+                onChange={(e) => setDataStackTwo(e.target.value)}
+              >
+                {dataStacksTwo &&
+                  dataStacksTwo.map((dataStackTwo) => (
+                    <option key={dataStackTwo.id}>{dataStackTwo.name}</option>
+                  ))}
+              </select>
+            </div>
+          </div>
 
-          <label htmlFor="name">End date</label>
-          <input
-            placeholder="DD/MM/YYYY"
-            type="date"
-            required
-            value={endTime}
-            onChange={(e) => setEndTime(e.target.value)}
-          />
+          <div className="bloc-date">
+            <div className="bloc-date-start">
+              <label htmlFor="name">Start date</label>
+              <input
+                placeholder="DD/MM/YYYY"
+                type="date"
+                required
+                value={startTime}
+                onChange={(e) => setStartTime(e.target.value)}
+              />
+            </div>
+
+            <div className="bloc-date-start">
+              <label htmlFor="name">End date</label>
+              <input
+                placeholder="DD/MM/YYYY"
+                type="date"
+                required
+                value={endTime}
+                onChange={(e) => setEndTime(e.target.value)}
+              />
+            </div>
+          </div>
 
           <label htmlFor="name">Priority</label>
           <select
@@ -135,9 +265,9 @@ const ProjectForm = () => {
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
           >
-            <option value="Ecoaction">Type d'Eco Event</option>
-            <option value="Dépollution">Dépollution</option>
-            <option value="Nettoyage">Nettoyage</option>
+            <option value="1">Low</option>
+            <option value="2">Medium</option>
+            <option value="3">Strong</option>
           </select>
 
           <button onClick={handleSubmit} className="button-addproject">

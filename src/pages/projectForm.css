@@ -11,7 +11,7 @@
 .container-form {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 280px;
   height: auto;
   padding-bottom: 20px;
   border-radius: 5px;
@@ -58,6 +58,7 @@ input {
   font-style: normal;
   color: #979191;
   font-weight: 400;
+  width: 100%;
 }
 
 input::placeholder,
@@ -93,8 +94,8 @@ label {
 }
 
 .button-addproject:hover {
-    background-color: #db743e;
-  }
+  background-color: #db743e;
+}
 
 select {
   display: flex;
@@ -108,6 +109,7 @@ select {
   font-style: normal;
   color: #979191;
   font-weight: 400;
+  width: 100%;
 }
 
 textarea {
@@ -149,7 +151,7 @@ textarea {
   .container-form {
     display: flex;
     flex-direction: row;
-    width: 450px;
+    width: 500px;
     height: auto;
     padding-bottom: 20px;
     border-radius: 5px;
@@ -168,7 +170,43 @@ textarea {
 
   .flata {
     width: 400px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 25px;
+  }
+
+  input {
+    background-color: #f8f6fa;
+    display: flex;
+    align-items: center;
+    border: 0.0625rem solid #f8f6fa;
+    height: 3rem;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 13px;
+    font-family: "Montserrat";
+    font-style: normal;
+    color: #979191;
+    font-weight: 400;
+    width: 100%;
+  }
+
+  .bloc-date {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .bloc-date-start{
+    width: 100%;
+  }
+
+  .bloc-date select {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .bloc-date-start select{
+    width: 100%;
   }
 }
