@@ -10,11 +10,12 @@
 
 
   /* colors */
-  --font-color: #ffffff;
+  --font-color: #183650;
   --primary-color: #183650;
   --secondary-color: #DB743E;
   --tertiary-color: #ffffff;
   --light-color: #f0f0f0;
+  --ligh-color2:#F9F9F9;
 
   /* containers */
   --box-shadow:0 5px 10px rgba(0, 0, 0, 0.432);
@@ -69,9 +70,9 @@
 
 .App{
   min-height: 100vh;
+  background-color: var(--ligh-color2);
 }
 body {
-  overflow: hidden;
   font-family: var(--big-font);
 }
 
