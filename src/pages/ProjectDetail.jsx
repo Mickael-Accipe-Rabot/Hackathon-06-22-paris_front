@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import './projectDetails.css'
 import EmployeeList from '../components/employee/EmployeeList'
@@ -8,14 +8,15 @@ import ShowInterest from '../components/buttons/ShowInterest'
 
 const ProjectDetails = () => {
   const [projectInfo, setProjectInfo] = useState([]);
+  const { projectID } = useParams();
 
   useEffect(() => {
       axios
-        .get('http://localhost:8000/api/projects')
+        .get(`http://localhost:8000/api/projects/${projectID}`)
         .then((res) => res.data)
         .then((data) => setProjectInfo(data));
     }, []);
-
+console.log(projectInfo);
   return (
 
     <div className='page projectDetails-container'>
