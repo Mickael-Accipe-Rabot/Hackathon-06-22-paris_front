@@ -22,17 +22,17 @@ console.log(projectInfo);
 
     <div className='page projectDetails-container'>
       <Link to="/home">
-      <p className='project-link'> Back to projects </p> 
+      <p className='projectDetails-link'> Back to projects </p> 
       </Link>
     {projectInfo &&
     <div>
 
-        <div className='project-head'> 
-    <h1 className='project-name'>{projectInfo.name}</h1>
+        <div className='projectDetails-head'> 
+    <h1 className='projectDetails-name'>{projectInfo.name}</h1>
     <ShowInterest />
         </div>
 
-                          <div className='projectInfo'>
+                          <div className='projectDetailsInfo'>
                             <table>
                               <thead>
                                 <tr>
@@ -55,14 +55,14 @@ console.log(projectInfo);
                             </table>
                           </div>
 
-                            <div className='project-content'> 
-                            <div className='projectDesc'>
+                            <div className='projectDetails-content'> 
+                            <div className='projectDetailsDesc'>
                               <h4>Description</h4>
-                              <p className='project-desc'>{projectInfo.description}</p>
+                              <p className='projectDetails-desc'>{projectInfo.description}</p>
                             </div>
     
   
-                              <div className='project-stackholders'>
+                              <div className='projectDetails-stackholders'>
                                 <h4>Collaborators</h4>
                               <EmployeeList/>
                               </div>
