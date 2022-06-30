@@ -1,10 +1,9 @@
 import React from 'react';
-import logowhite from '../../assets/images/logowhite.svg'
+import logowhite from '../../assets/images/logowhite.svg';
 import './navbar.css';
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import Disconnect from '../Disconnect';
-
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -12,8 +11,8 @@ const Navbar = () => {
 
   const OnLogout = () => {
     handleClick();
-    <Disconnect />
-  } 
+    <Disconnect />;
+  };
 
   return (
     <div className="navbar-container">
@@ -22,7 +21,9 @@ const Navbar = () => {
           <NavLink
             to="./home"
             className={(navData) =>
-              navData.isActive ? 'active nav-links navlink-logo' : 'nav-links navlink-logo'
+              navData.isActive
+                ? 'active nav-links navlink-logo'
+                : 'nav-links navlink-logo'
             }
             onClick={handleClick}
           >
@@ -62,29 +63,28 @@ const Navbar = () => {
             Clients
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to="./"
-            className={(navData) =>
-              navData.isActive ? 'active nav-links' : 'nav-links'
-            }
-            onClick={OnLogout} 
-          >
-            Logout
-          </NavLink>
-          
-        </li>
       </ul>
 
       <NavLink
         to="./user-profile"
         className={(navData) =>
-          navData.isActive ? 'active nav-links navlink-user' : 'nav-links navlink-user'
+          navData.isActive
+            ? 'active nav-links navlink-user'
+            : 'nav-links navlink-user'
         }
         onClick={handleClick}
       >
-        <img src="https://randomwordgenerator.com/img/picture-generator/55e0d1464d52aa14f1dc8460962e33791c3ad6e04e507441722a72dc9244c4_640.jpg" alt="#" className="navbar-user" />
+        <img
+          src="https://randomwordgenerator.com/img/picture-generator/55e0d1464d52aa14f1dc8460962e33791c3ad6e04e507441722a72dc9244c4_640.jpg"
+          alt="#"
+          className="navbar-user"
+        />
       </NavLink>
+      <div>
+        <NavLink to="./" className="nav-links logOut" onClick={OnLogout}>
+          Logout
+        </NavLink>
+      </div>
     </div>
   );
 };
