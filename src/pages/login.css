@@ -223,6 +223,11 @@ select.input-error {
 
 @media screen and (min-width: 960px) {
 
+<<<<<<< HEAD
+=======
+ 
+
+>>>>>>> dev
   .container-login {
     display: flex;
     align-items: center;

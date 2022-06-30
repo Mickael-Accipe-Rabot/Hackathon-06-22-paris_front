@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../components/nav/Navbar';
 import './userProfile.css';
 
 const UserProfile = () => {
@@ -13,6 +14,7 @@ const user={
 
   return (
     <div className="page userProfile-container">
+      <Navbar/>
       <h1>{user.name}  {user.lastname}</h1>
       <p>date d'embauche : {user.embauche}</p>
       <p>techno : {user.techno}</p>

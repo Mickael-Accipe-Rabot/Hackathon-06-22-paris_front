@@ -9,38 +9,37 @@ const ProjectsList = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8000/api/project')
+      .get('http://localhost:8000/api/projects')
       .then((res) => res.data)
       .then((data) => setProjects(data));
   }, []);
 
-
-
   return (
-    <div className='projectsList-container'>
-      <ul className='Projects-subMenu'>
-        <li className='subMenu-title'>Projects</li>
+    <div className="projectsList-container">
+      <ul className="Projects-subMenu">
+        <li className="subMenu-title">Projects</li>
         <div className="subMenu-infos">
-        <li>Clients</li>
-        <li>Sart date</li>
-        <li>Timing</li>
+          <li>Clients</li>
+          <li>Sart date</li>
+          <li>End date</li>
         </div>
-        <li className='subMenu-stacks'>Stacks</li>
-        <li className='subMenu-status'>Status</li>
+        <li className="subMenu-stacks">Stacks</li>
+        <li className="subMenu-status">Status</li>
       </ul>
-      {/* {projects &&
-        projects.map((project, index) => (
-          <div key={index}>
-            {' '}
-            <ProjectCard project={project}/>{' '}
-          </div>
-        ))} */}
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
+      {projects &&
+        projects.map((project, index) => <ProjectCard project={project} />)}
+
+      {projects.status_id === 1 ? (
+        <p className="design-status subMenu-status">Design</p>
+      ) : projects.status_id === 2 ? (
+        <p className="dev-status subMenu-status">Production</p>
+      ) : projects.status_id === 3 ? (
+        <p className="test-status subMenu-status">Test</p>
+      ) : projects.status_id === 4 ? (
+        <p className="deploy-status subMenu-status">Déploiement</p>
+      ) : (
+        null
+      )}
     </div>
   );
 };
