@@ -15,7 +15,7 @@ th {
     width: 20%;
     padding-bottom: 5px;
     padding-top: 1rem;
-    font-size: 12px;
+    font-size: var(--fontS);
     font-weight: 400;
     font-family: var(--big-font);
 }
@@ -23,7 +23,7 @@ th {
 td {
     text-align: left;
     word-wrap: break-word;
-    font-size: 10px;
+    font-size: var(--fontS);
     font-weight: 0;
     font-family: var(--little-font);
     padding-bottom: 1rem;
