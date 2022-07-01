@@ -4,6 +4,8 @@ import axios from 'axios'
 import "./clientsList.css";
 import ClientCard from '../components/client/ClientCard';
 import CreateClient from '../components/buttons/CreateClient';
+import Navbar from '../components/nav/Navbar';
+
 
 const ClientsList = () => {
 
@@ -20,6 +22,7 @@ const ClientsList = () => {
 
   return (
     <div className='page clientsList-container'>
+      <Navbar/>
         <div className='clientCard'>
         <div className='ClientCard-title'>
       <h4 className='clientList-name'>Client</h4>

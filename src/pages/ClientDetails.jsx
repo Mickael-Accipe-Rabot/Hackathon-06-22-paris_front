@@ -6,6 +6,8 @@ import './clientDetails.css'
 import ClientProjectCard from "../components/client/ClientProjectCard"
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
+import Navbar from '../components/nav/Navbar';
+
 
 const ClientDetails = ({ client }) => {
   const [clientInfo, setClientInfo] = useState([]);
@@ -20,6 +22,8 @@ const ClientDetails = ({ client }) => {
 
   return (
     <div className='page clientDetails-container'>
+      <Navbar/>
+      
       <Link to="/clientslist">
       <p className='clientDetails-link'> Back to clients </p> 
       </Link>
