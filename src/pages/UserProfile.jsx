@@ -23,8 +23,9 @@ const UserProfile = () => {
     <div className="page userProfile-container">
       <Navbar/>
       {userActive && (
+        <>
         <h2 className="home-title">Welcome {`${userActive.firstname} ${userActive.lastname}`}</h2>
-      )}
+
       <div className='projectDetails-content'> 
         <div className='projectDetailsDesc'>
           <div  className='projectDetailsDesc2'>
@@ -61,7 +62,10 @@ const UserProfile = () => {
           </div>
         </div>
         </div> 
+        </>
+          )}
     </div>
+
   );
 };
 
