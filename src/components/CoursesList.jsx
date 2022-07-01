@@ -1,37 +1,31 @@
 import React from 'react';
-import './projectsList.css';
+import './coursesList.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import CourseCard from './CourseCard';
 
 const CoursesList = () => {
-  const [projects, setProjects] = useState([]);
+  const [courses, setCourses] = useState([]);
 
   useEffect(() => {
     axios
-      .get('http://localhost:8000/api/project')
+      .get('http://localhost:8000/api/courses-list')
       .then((res) => res.data)
-      .then((data) => setProjects(data));
+      .then((data) => setCourses(data));
   }, []);
 
 
 
   return (
-    <div className='projectsList-container'>
+    <div className='coursesList-container'>
       CoursesList
-      {/* {projects &&
-        projects.map((project, index) => (
-          <div key={index}>
-            {' '}
-            <CoursesCard project={project}/>{' '}
-          </div>
-        ))} */}
-        <CourseCard/>
-        <CourseCard/>
-        <CourseCard/>
-        <CourseCard/>
-        <CourseCard/>
-        <CourseCard/>
+      {courses &&
+        courses.map((course, index) => (
+         
+           
+            <CourseCard key={index} course={course}/>
+        
+        ))}
     </div>
   );
 };

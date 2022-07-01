@@ -1,23 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './projectCard.css';
-const CourseCard = ({ project, color }) => {
-    
+import './courseCard.css';
+import moment from 'moment';
+const CourseCard = ({ course, color }) => {
+  const start_date = moment(course.start_date).format('MMM Do YY');
+  const end_date = moment(course.end_date).format('MMM Do YY');
+
   return (
-    <div className="">
-      {/* <Link to={`/project-detail${project.id}`}> */}
-        <div
-          className="projectCard-container"
-        //   style={{ backgroundColor: color }}
-        >
-            {/* <h3>{project.name}</h3> */}
-            {/* <h3>{project.enterprise}</h3> */}
-            <h3>name</h3>
-            <h3>enterprise</h3>
-            <p>Techno : React/Node</p>
-            <p>description</p>
-        </div>
-      {/* </Link> */}
+    <div className="courseCard-container">
+      <Link to={`/course-detail${course.id}`}className='course-card2'>
+        <h3 className="course-title">{course.project_name}</h3>
+        <p className="course-date">{start_date}</p>
+        {console.log(course)}
+        <p className="course-stack stack-tag">Stacks</p>
+      </Link>
     </div>
   );
 };
