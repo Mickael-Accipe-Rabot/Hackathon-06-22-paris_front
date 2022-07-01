@@ -1,4 +1,8 @@
 
+.home-title {
+    padding-left: 3rem;
+}
+
 .projectDetailsInfo {
     display: flex;
     flex-direction: row;
@@ -6,7 +10,7 @@
     justify-content: center;
     background-color: white;
     width: 85%;
-    height: 20rem;
+    height: 24rem;
     padding-left: 2rem;
     margin-bottom: 2rem;
     margin-left: 3rem;
@@ -19,7 +23,7 @@
     justify-content: flex-start;
     background-color: white;
     height: 24rem;
-    width: 50%;
+    width: 40%;
     padding: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -29,6 +33,18 @@
 
 .projectDetailsDesc2 {
     padding-bottom: 2rem;
+}
+
+.projectDetailsDesc3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+gap: 2rem;
+    padding-bottom: 2rem;
+}
+.projectDetailsDesc4 {
+    width: 60%;
 }
 
 .projectDetails-head {
@@ -87,7 +103,7 @@
     flex-direction: column;
     justify-content: flex-start;
     background-color: white;
-    width: 50%;
+    width: 60%;
     padding: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -110,3 +126,17 @@
     color: gray;
     text-decoration: none;
 }
+
+.stacks-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+  .stack-tag {
+    text-align: center;
+    width: 4rem;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+  }

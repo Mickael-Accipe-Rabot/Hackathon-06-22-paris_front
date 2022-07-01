@@ -48,17 +48,40 @@ const UserProfile = () => {
 
         <div className='projectDetails-stackholders'>
           <h4 className='projectDetails-title'>My projects</h4>
-          <div  className='projectDetailsDesc2'>
-            <h4 className='projectDetails-desc'>Page One Shop</h4>
+          <div  className='projectDetailsDesc3'>
+          <div  className='projectDetailsDesc4'>
+            <h4 className='projectDetails-desc2'>Page One Shop</h4>
             <p>Marcel industry</p>
+            </div>
+            <div className="stacks-container">
+            <p className="stack-tag">React</p>
+            <p className="stack-tag">JS</p>
+            <p className="stack-tag">Node</p>
           </div>
-          <div  className='projectDetailsDesc2'>
-            <h4 className='projectDetails-desc'>Shoplist</h4>
+          </div>
+          <div  className='projectDetailsDesc3'>
+          <div  className='projectDetailsDesc4'>
+            <h4 className='projectDetails-desc2'>Shoplist</h4>
             <p>Carrefour</p>
+            </div>
+            <div className="stacks-container">
+            <p className="stack-tag">PHP</p>
+            <p className="stack-tag">Symfony</p>
           </div>
-          <div  className='projectDetailsDesc2'>
-            <h4 className='projectDetails-desc'>Gusto Mobile</h4>
+
+          </div>
+          
+          <div  className='projectDetailsDesc3'>
+          <div  className='projectDetailsDesc4'>
+            <h4 className='projectDetails-desc2'>Gusto Mobile</h4>
             <p>Valeo</p>
+            </div>
+            <div className="stacks-container">
+            <p className="stack-tag">React</p>
+            <p className="stack-tag">JS</p>
+            <p className="stack-tag">Node</p>
+          </div>
+
           </div>
         </div>
         </div> 
