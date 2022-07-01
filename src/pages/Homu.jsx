@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './home.css';
-import ProjectsList from '../components/ProjectsList';
+import ProjectsLost from '../components/ProjectsLost';
 import UserProvider from '../context/UserProvider';
 import { useUser } from '../contexts/UserProvider';
 import CreateProject from '../components/buttons/CreateProject';
 import Navbar from '../components/nav/Navbar';
 import Filters from '../components/Filters';
 
-const Home = () => {
+const Homu = () => {
   const { user } = useUser();
   const [userActive, setUserActive] = useState();
   
@@ -29,9 +29,9 @@ const Home = () => {
         )}
       <CreateProject />
       <Filters/>
-      <ProjectsList />
+      <ProjectsLost />
     </div>
   );
 };
 
-export default Home;
+export default Homu;
