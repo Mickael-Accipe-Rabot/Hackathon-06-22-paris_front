@@ -6,6 +6,7 @@ import moment from 'moment';
 import './projectDetails.css'
 import EmployeeList from '../components/employee/EmployeeList'
 import ShowInterest from '../components/buttons/ShowInterest'
+import Navbar from '../components/nav/Navbar';
 
 const ProjectDetails = () => {
   const [projectInfo, setProjectInfo] = useState([]);
@@ -22,7 +23,9 @@ const ProjectDetails = () => {
     
   return (
 
+   
     <div className='page projectDetails-container'>
+       <Navbar/>
       <Link to="/home">
       <p className='projectDetails-link'> Back to projects </p> 
       </Link>
