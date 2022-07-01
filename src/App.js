@@ -9,14 +9,14 @@ import Login from "./pages/Login";
 import ProjectDetails from "./pages/ProjectDetail";
 import ProjectForm from "./pages/ProjectForm";
 import UserProfile from "./pages/UserProfile";
-import Navbar from './components/nav/Navbar';
 import CoursesDetails from "./pages/CoursesDetails";
+
 
 function App() {
   return (
     <div className="App">
       <UserProvider>
-        <Navbar/>
+        
         <Routes>
           <Route path="/" element={<Login />}></Route>
           <Route path="/home" element={<Home />}></Route>

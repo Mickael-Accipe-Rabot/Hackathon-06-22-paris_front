@@ -1,10 +1,10 @@
 import React from 'react'
 import "./coursesProjectCard.css"
-import { Link } from 'react-router-dom'
 
-const CoursesProjectCard = () => {
+const CoursesPHP = () => {
   return (
-    <Link to={'/courses-details'} style={{ textDecoration: 'none' , color: "black"}}>
+    <div className='CoursesPHP'>
+       
     <div className='CoursesProjectCard'>
         <table className='CoursesProjectCard-table'>
           <thead>
@@ -16,15 +16,15 @@ const CoursesProjectCard = () => {
             </tr>
           </thead>
           <tbody className='CoursesProjectCard-td'>
-            <td>20</td>
-            <td>2 Jui 22</td>
-            <td>3 days</td>
-            <td>Javascript</td>
+            <td>12</td>
+            <td>22 Jui 22</td>
+            <td>1 week</td>
+            <td>PHP</td>
           </tbody>
         </table>  
     </div>
-    </Link>
+    </div>
   )
 }
 
-export default CoursesProjectCard
+export default CoursesPHP

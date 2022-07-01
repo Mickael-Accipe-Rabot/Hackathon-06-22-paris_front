@@ -1,6 +1,7 @@
 .ClientCardContent {
     display: flex;
     flex-direction: row;
+    align-items: center;
     /* justify-content: center; */
     gap: 20rem;
     background-color: white;
@@ -9,25 +10,29 @@
     font-family: var(--little-font);
     font-size: 12px;
     width: 90%;
-    height: 4rem;
+    height: 6rem;
     margin-left: 3rem;
+    border-radius:8px;
 }
 
 .ClientCardContent:hover {
-    box-shadow: 1px 0px 1px 1px var(--secondary-color);
-    background-color: var(--secondary-color);
-    color: white;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
 
 .clientCard-name {
     width: 50%;
+    font-size: 1.5rem;
+    font-family: var(--big-font);
+    color:var(--primary-color);
 }
 
 .clientCard-city {
     width: 25%;
+    font-size: 1.3rem;
 }
 
 .clientCard-category {
     width: 25%;
+    font-size: 1rem;
 }
