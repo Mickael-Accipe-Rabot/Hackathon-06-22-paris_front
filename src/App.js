@@ -12,6 +12,7 @@ import UserProfile from "./pages/UserProfile";
 import Navbar from './components/nav/Navbar';
 import CoursesDetails from "./pages/CoursesDetails";
 
+
 function App() {
   return (
     <div className="App">

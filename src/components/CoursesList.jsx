@@ -1,37 +1,19 @@
 import React from 'react';
-import './projectsList.css';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import CourseCard from './CourseCard';
+import './coursesList.css';
+
+import CoursesProjectCard from './courses/CoursesProjectCard';
+import CoursesPHP from './courses/CoursesPHP';
+import CoursesJava from './courses/CoursesJava';
 
 const CoursesList = () => {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get('http://localhost:8000/api/project')
-      .then((res) => res.data)
-      .then((data) => setProjects(data));
-  }, []);
-
-
-
   return (
-    <div className='projectsList-container'>
-      CoursesList
-      {/* {projects &&
-        projects.map((project, index) => (
-          <div key={index}>
-            {' '}
-            <CoursesCard project={project}/>{' '}
-          </div>
-        ))} */}
-        <CourseCard/>
-        <CourseCard/>
-        <CourseCard/>
-        <CourseCard/>
-        <CourseCard/>
-        <CourseCard/>
+    <div className='CourseList'>
+        <h1 className='CourseList-title'>Improve your skills with our E-learning modules</h1>
+        <div className='CourseList-content'>
+        <CoursesProjectCard/>
+        <CoursesPHP/>
+        <CoursesJava/>
+        </div>
     </div>
   );
 };
