@@ -8,7 +8,7 @@
   border: solid 1px #c0c0c0;
   margin: 0;
   text-decoration: none;
-  color:black;
+  color:var(--primary-color);
 }
 .projectCard-container div:first-child{
  display: flex;

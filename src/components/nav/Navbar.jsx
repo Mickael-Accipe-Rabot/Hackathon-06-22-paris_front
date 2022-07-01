@@ -19,7 +19,7 @@ const Navbar = () => {
       <ul className="navbar-list">
         <li>
           <NavLink
-            to="./home"
+            to="/home"
             className={(navData) =>
               navData.isActive
                 ? 'active nav-links navlink-logo'
@@ -32,7 +32,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to="./home"
+            to="/home"
             className={(navData) =>
               navData.isActive ? 'active nav-links' : 'nav-links'
             }
@@ -43,7 +43,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to="./courses"
+            to="/courses"
             className={(navData) =>
               navData.isActive ? 'active nav-links' : 'nav-links'
             }
@@ -54,7 +54,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to="./clientslist"
+            to="/clientslist"
             className={(navData) =>
               navData.isActive ? 'active nav-links' : 'nav-links'
             }
@@ -66,7 +66,7 @@ const Navbar = () => {
       </ul>
 
       <NavLink
-        to="./user-profile"
+        to="/user-profile"
         className={(navData) =>
           navData.isActive
             ? 'active nav-links navlink-user'
@@ -81,7 +81,7 @@ const Navbar = () => {
         />
       </NavLink>
       <div>
-        <NavLink to="./" className="nav-links logOut" onClick={OnLogout}>
+        <NavLink to="/" className="nav-links logOut" onClick={OnLogout}>
           Logout
         </NavLink>
       </div>

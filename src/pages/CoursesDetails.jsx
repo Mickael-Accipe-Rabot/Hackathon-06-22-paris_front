@@ -4,10 +4,13 @@ import "./coursesDetails.css"
 import EmailIcon from '@mui/icons-material/Email';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 import LinkIcon from '@mui/icons-material/Link';
+import Navbar from '../components/nav/Navbar';
+
 
 const CoursesDetails = () => {
   return (
-    <div className='pages coursesDetails'>
+    <div className='coursesDetails'>
+        <Navbar/>
          <Link to="/courses">
       <p className='coursesDetails-link'> Back to courses </p> 
       </Link>

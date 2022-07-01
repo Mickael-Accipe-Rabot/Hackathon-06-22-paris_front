@@ -5,6 +5,7 @@ import ProjectsList from '../components/ProjectsList';
 import UserProvider from '../context/UserProvider';
 import { useUser } from '../contexts/UserProvider';
 import CreateProject from '../components/buttons/CreateProject';
+import Navbar from '../components/nav/Navbar';
 
 const Home = () => {
   const { user } = useUser();
@@ -21,8 +22,9 @@ const Home = () => {
 
   return (
     <div className="page home-container">
+       <Navbar/>
       {userActive && (
-        <h2 className="home-title">Welcome {`${userActive.firstname} ${userActive.lastname} ${userActive.isadmin}`}</h2>
+        <h2 className="home-title">Welcome {`${userActive.firstname} ${userActive.lastname}`}</h2>
         )}
       <CreateProject />
       <ProjectsList />

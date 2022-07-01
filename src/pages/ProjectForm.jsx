@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from '../components/nav/Navbar'
 import "./projectForm.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -81,6 +82,7 @@ const ProjectForm = () => {
 
   return (
     <div className="page-container page">
+      <Navbar/>
       <div className="bloc-title">
         <div className="add-project">CREATE A NEW PROJECT</div>
         <img src={flata} className="flata" />
