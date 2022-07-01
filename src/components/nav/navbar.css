@@ -10,14 +10,14 @@
   box-shadow: var(--box-shadow);
   font-weight: bold;
   z-index: 1000;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 .navbar-list {
   display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
-  gap:.5rem;
+  gap: 0.5rem;
 }
 .navbar-list li {
   display: flex;
@@ -37,7 +37,7 @@
   width: 4rem;
   color: var(--font-color);
   transition: var(--transition2);
-  color:var(--light-color);
+  color: var(--light-color);
 }
 
 .navbar-user {
@@ -53,15 +53,14 @@
 }
 .navlink-logo {
   width: 5rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 .navbar-user {
   margin: 0 var(--marginL) 0 0;
 }
-.logOut{
+.logOut {
   margin: 0 1rem 0 0;
 }
-
 
 @media screen and (min-width: 960px) {
   .navbar-container {
@@ -74,7 +73,7 @@
   .navbar-list {
     flex-direction: column;
     justify-content: flex-start;
-    gap:0;
+    gap: 0;
   }
   .nav-links {
     height: 4rem;
@@ -96,18 +95,18 @@
   }
   .navlink-logo {
     width: 9rem;
-  } 
-  .navbar-list li:first-child{
-    height:10rem;
   }
-  .logOut{
-    width:100%;
-    border-top:solid 1px white;
+  .navbar-list li:first-child {
+    height: 10rem;
+  }
+  .logOut {
+    width: 100%;
+    border-top: solid 1px white;
     transition: ease-in-out 200ms;
   }
-  .logOut:hover{
+  .logOut:hover {
     background-color: var(--primary-color);
-    color:var(--secondary-color);
+    color: var(--secondary-color);
   }
   .navbar-user {
     display: block;

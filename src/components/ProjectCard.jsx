@@ -5,33 +5,27 @@ import moment from 'moment';
 import { useParams } from 'react-router-dom';
 
 const ProjectCard = ({ project, color }) => {
-  
   const start_date = moment(project.start_date).format('MMM Do YY');
   const end_date = moment(project.end_date).format('MMM Do YY');
 
-
   var random_boolean_value = Math.random() < 0.5;
-  for(var i=0 ; i < 10 ; i++){
+  for (var i = 0; i < 10; i++) {
     var rand_number = Math.random();
     console.log(rand_number);
     var random_boolean_value = rand_number < 0.5;
     console.log(random_boolean_value);
- }
-  //  let { id } = useParams();
+  }
 
   return (
     <Link
       to={`/project-details/${project.id} `}
-      className={random_boolean_value ? "projectCard-container secret-case" : 'projectCard-container'}
+      className={
+        random_boolean_value
+          ? 'projectCard-container secret-case'
+          : 'projectCard-container'
+      }
     >
-      <div className='project-card'>
-        {/* <Link to={`/project-detail${project.id}`}> */}
-        {/* <div
-        className=""
-        //   style={{ backgroundColor: color }}
-      > */}
-        {/* <h3>{project.name}</h3> */}
-        {/* <h3>{project.enterprise}</h3> */}
+      <div className="project-card">
         <div className="project-title">
           <h3 className="project-name">
             <img
@@ -41,14 +35,7 @@ const ProjectCard = ({ project, color }) => {
             />
             {project.name}
           </h3>
-          </div>
-          {/* <p className={isActiv ? 'status-tag':"status-tag-over" }>status</p> */}
-
-          {/* {statusId === 1 ? <p className='design-status subMenu-status'>Design</p>
-          : statusId === 2 ? <p className='dev-status subMenu-status'>Production</p>
-        :statusId === 3 ? <p className='test-dev subMenu-status'>Test</p>
-        :statusId === 4 ? <p className='deploy-status subMenu-status'>Déploiement</p>:
-      <p>null</p> } */}
+        </div>
         <div className="client-infos">
           <p className="client-name">{project.name}</p>
           <p className="client-date">{start_date}</p>
@@ -60,7 +47,6 @@ const ProjectCard = ({ project, color }) => {
           <p className="stack-tag">Stacks</p>
           <p className="stack-tag">Stacks</p>
         </div>
-        {/* </div> */}
         {project.status_id === 1 ? (
           <p className="design-status c-status">Design</p>
         ) : project.status_id === 2 ? (

@@ -6,8 +6,6 @@ import { useUser } from '../../contexts/UserProvider';
 import axios from 'axios';
 
 const CreateCourse = () => {
-  //en props la table user fetchée dans App ?
-  //objectif, récupérer le booléan isAdmin pour afficher ou non le bouton de création de projet
   const { user } = useUser();
   const [userActive, setUserActive] = useState();
 
@@ -15,8 +13,7 @@ const CreateCourse = () => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/employees/${user.id}`)
       .then((res) => res.data)
-      .then((data) => setUserActive(data)
-      );
+      .then((data) => setUserActive(data));
   }, [user.id]);
 
   return (
@@ -25,7 +22,7 @@ const CreateCourse = () => {
         <Link to="/course-form">
           <div className="create-btn btn">New Course</div>
         </Link>
-     ) : null} 
+      ) : null}
     </div>
   );
 };

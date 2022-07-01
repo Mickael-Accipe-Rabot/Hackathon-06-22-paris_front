@@ -1,30 +1,30 @@
 .clientProject-data {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
 }
 
 th {
-    color: black;
-    text-align: left;
-    width: 20%;
-    padding-bottom: 5px;
-    padding-top: 1rem;
-    font-size: var(--fontS);
-    font-weight: 400;
-    font-family: var(--big-font);
+  color: black;
+  text-align: left;
+  width: 20%;
+  padding-bottom: 5px;
+  padding-top: 1rem;
+  font-size: var(--fontS);
+  font-weight: 400;
+  font-family: var(--big-font);
 }
 
 td {
-    text-align: left;
-    word-wrap: break-word;
-    font-size: var(--fontS);
-    font-weight: 0;
-    font-family: var(--little-font);
-    padding-bottom: 1rem;
+  text-align: left;
+  word-wrap: break-word;
+  font-size: var(--fontS);
+  font-weight: 0;
+  font-family: var(--little-font);
+  padding-bottom: 1rem;
 }
