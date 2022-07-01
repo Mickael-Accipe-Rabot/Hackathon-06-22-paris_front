@@ -14,6 +14,8 @@ const ProjectsList = () => {
       .then((data) => setProjects(data));
   }, []);
 
+  
+
   return (
     <div className="projectsList-container">
       <ul className="Projects-subMenu">
@@ -27,7 +29,10 @@ const ProjectsList = () => {
         <li className="subMenu-status">Status</li>
       </ul>
       {projects &&
-        projects.map((project, index) => <ProjectCard project={project} />)}
+        projects.map((project, index) => <ProjectCard project={project}className={project.secret ? "projectCard-container secret-case":null} />)}
+
+{console.log('SECRET:',projects.secret)}
+
 
       {projects.status_id === 1 ? (
         <p className="design-status subMenu-status">Design</p>
@@ -40,6 +45,8 @@ const ProjectsList = () => {
       ) : (
         null
       )}
+
+      
     </div>
   );
 };

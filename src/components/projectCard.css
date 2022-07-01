@@ -144,6 +144,10 @@
     right:1rem;
     /* top:1rem; */
   }
+  .projectCard-container.secret-case{
+    backdrop-filter: blur(5px);
+
+  }
   /* .projectCard-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
