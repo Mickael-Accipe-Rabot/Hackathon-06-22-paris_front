@@ -2,31 +2,23 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import "./clientCard.css"
+import { Link } from 'react-router-dom';
 
-const ClientCard = () => {
-    const [clientCardInfo, setClientCardInfo] = useState([]);
-
-  useEffect(() => {
-      axios
-        .get('http://localhost:8000/api/clients')
-        .then((res) => res.data)
-        .then((data) => setClientCardInfo(data));
-    }, []);
+const ClientCard = ({ client }) => {
 
   return (
+    <Link to={`/client-details/${client.id}`} style={{ textDecoration: 'none' , color: "black"}}>
     <div className='ClientCard'>
-{clientCardInfo &&
-        clientCardInfo.map((client) => (
           <div>
      <div className='ClientCardContent'>
-        <p className='client-name'>{client.name}</p>
-        <p className='client-city'>{client.city}</p>
-        <p className='client-category'>{client.category_id}</p> 
+        <p className='clientCard-name'>{client.name}</p>
+        <p className='clientCard-city'>{client.city}</p>
+        <p className='clientCard-category'>{client.category_id}</p> 
       </div>
 
       </div>
-    ))}
     </div>
+    </Link>
   )
 }
 

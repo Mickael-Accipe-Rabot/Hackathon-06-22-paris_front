@@ -20,14 +20,14 @@
     cursor: pointer;
 }
 
-.client-name {
+.clientCard-name {
     width: 50%;
 }
 
-.client-city {
+.clientCard-city {
     width: 25%;
 }
 
-.client-category {
+.clientCard-category {
     width: 25%;
 }

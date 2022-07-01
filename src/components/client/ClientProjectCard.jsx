@@ -2,27 +2,29 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import "./clientProjectCard.css"
+import moment from 'moment';
 
-const ClientProjectCard = () => {
+const ClientProjectCard = ({ clientID }) => {
     const [clientProjectInfo, setClientProjectInfo] = useState([]);
 
   useEffect(() => {
       axios
-        .get('http://localhost:8000/api/projects')
+        .get(`http://localhost:8000/api/projects/${clientID}`)
         .then((res) => res.data)
         .then((data) => setClientProjectInfo(data));
     }, []);
+
+    const start_date = moment(clientProjectInfo.start_date).format('MMM Do YY');
+    const end_date = moment(clientProjectInfo.end_date).format('MMM Do YY');
+
   return (
     <div className='ClientProjectCard'>
 
 {clientProjectInfo &&
-        clientProjectInfo.map((project) => (
-
      <div className='clientProject-data'>
-
-<table>
+<table className='clientProject-table'>
           <thead>
-            <tr>
+            <tr className='clientProject-tr'>
               <th>Project</th>
               <th>Date Created</th>
               <th>Deadline</th>
@@ -31,17 +33,17 @@ const ClientProjectCard = () => {
               <th>Status</th>
             </tr>
           </thead>
-          <tbody>
-            <td>{project.name}</td>
-            <td>{project.start_date}</td>
-            <td>{project.end_date}</td>
+          <tbody className='clientProject-td'>
+            <td>{clientProjectInfo.name}</td>
+            <td>{start_date}</td>
+            <td>{end_date}</td>
             <td>React-PHP</td>
-            <td>{project.priority}</td>
-            <td>{project.status_id}</td>
+            <td>{clientProjectInfo.priority}</td>
+            <td>{clientProjectInfo.status_id}</td>
           </tbody>
         </table>     
       </div>
-    ))}
+    }
   </div>
     )}
 

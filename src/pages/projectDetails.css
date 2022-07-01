@@ -1,5 +1,5 @@
 
-.projectInfo {
+.projectDetailsInfo {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -13,7 +13,7 @@
     border-radius: 5px;
 }
 
-.projectDesc {
+.projectDetailsDesc {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -26,7 +26,7 @@
     border-radius: 5px;
 }
 
-.project-head {
+.projectDetails-head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,48 +35,49 @@
     width: 90%;
 }
 
-.project-name {
+.projectDetails-name {
     color: var(--secondary-color);
     font-family: var( --big-font);
     font-size: var(--fontL);
     margin-left: 3rem;
 }
 
-table {
+.projectDetailsInfo table {
     border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
     
 }
 
-th {
+.projectDetailsInfo th {
     color: black;
     text-align: left;
     padding-bottom: 5px;
-    font-size: 14px;
+    font-size: var(--fontS);
     font-weight: 400;
     font-family: var(--big-font);
 
 }
 
-td {
+.projectDetailsInfo td {
     text-align: left;
     word-wrap: break-word;
-    font-size: 12px;
+    font-size: var(--fontS);
     font-weight: 0;
     font-family: var(--little-font);
+    border: none;
 }
 
-h4 {
+.projectDetails-title {
     padding-bottom: 1rem;
 }
 
-.project-desc {
+.projectDetails-desc {
     font-family: var(--little-font);
-    font-size: 12px;
+    font-size: var(--fontS);
 }
 
-.project-stackholders {
+.projectDetails-stackholders {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -89,13 +90,13 @@ h4 {
     border-radius: 5px;
 }
 
-.project-content {
+.projectDetails-content {
     display: flex;
     flex-direction: row;
     width: 90%;
 }
 
-.project-link {
+.projectDetails-link {
     margin-left: 3rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
