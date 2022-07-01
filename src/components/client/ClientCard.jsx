@@ -19,7 +19,7 @@ const ClientCard = ({ client }) => {
       </div>
     </div>
     </Link>
-  )
+  ) 
 }
 
 export default ClientCard

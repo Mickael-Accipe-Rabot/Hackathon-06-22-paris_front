@@ -1,3 +1,16 @@
+.CourseList-title {
+    font-family: var(--big-font);
+    font-size: var(--fontM);
+    color: gray;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.CourseList {
+    margin-top: 0;
+    padding-top: 0;
+}
 .coursesList-container{
     width:100%;
     display: flex;

@@ -11,6 +11,7 @@ import ProjectForm from "./pages/ProjectForm";
 import UserProfile from "./pages/UserProfile";
 import CoursesDetails from "./pages/CoursesDetails";
 
+
 function App() {
   return (
     <div className="App">
