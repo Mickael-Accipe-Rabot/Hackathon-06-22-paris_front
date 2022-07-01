@@ -140,6 +140,9 @@ textarea::placeholder {
     margin-left: 25vh;
     margin-top: 3vh;
   }
+  .form-project-page{
+    background-color: var(--light2-color);
+  }
 
   .bloc-title {
     display: flex;

@@ -81,7 +81,7 @@ const ProjectForm = () => {
   }, []);
 
   return (
-    <div className="page-container page">
+    <div className="page-container page form-project-page">
       <Navbar/>
       <div className="bloc-title">
         <div className="add-project">CREATE A NEW PROJECT</div>
