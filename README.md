@@ -9,18 +9,23 @@ We wanted to :
 - avoid duplicated projects
 - respect confidentiality
 
-# Getting Started with Create React App
+## Repo back-end is required ##
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## To connect with employee account:
+- mail = lucienjeuness@aol.com
+- password = password
 
-## Before run Start by :
+## Before run :
 ## `npm install`
+
+## Run with : 
+## `npm start`
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
