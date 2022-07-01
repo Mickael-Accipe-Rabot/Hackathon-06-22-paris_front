@@ -1,0 +1,72 @@
+.projectsList-container{
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* align-items: center; */
+    gap:var(--marginL);
+    background-color: #F9F9F9;
+}
+.design-status{
+    background-color:#849AFD ;
+  }
+  .deploy-status{
+    background-color:#933EB0 ;
+  }
+  .dev-status{
+    background-color:#58B49C ;
+  }
+  .test-status{
+    background-color:#EAC234;
+  }
+  .Projects-subMenu{
+      display:none;
+  }
+
+@media screen and (min-width:960px) {
+    .projectsList-container{
+        gap:var(--marginS);
+        align-items: center;
+    }
+
+    .Projects-subMenu{
+        display: block;
+        position: relative;
+        width:100%;
+        height:3rem;
+        padding:     0 2rem;;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        background-color: #eeeeee;  
+        border-radius: 8px;
+        color:rgb(154, 154, 154);
+    }
+
+    .subMenu-infos{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+        margin: 0 0 0 18%;
+    }
+    .subMenu-stacks{
+        display:flex;
+        justify-content:center;
+        margin: 0  10% 0 0;
+        
+    }
+    li.subMenu-status{
+        display: flex;
+        flex-direction: row;
+        right:1rem;
+        color:rgb(154, 154, 154);
+    }
+    .design-status{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}

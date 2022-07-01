@@ -1,0 +1,30 @@
+.create-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 120;
+  font-size: var(--fontS);
+  background-color: var(--light-color2);
+  color: var(--secondary-color);
+  transition: var(--transition1);
+  border: 1px solid var(--secondary-color);
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.create-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-color2);
+}
+
+@media screen and (min-width: 960px) {
+  .create-btn {
+    right: 4.45%;
+    top: 2rem;
+    left: initial;
+    bottom: initial;
+    transform: initial;
+  }
+}

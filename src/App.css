@@ -1,107 +1,140 @@
-*{
-  margin:0;
-  padding:0;
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Montserrat:wght@800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-          /* VARIABLES */
-:root{
+/* VARIABLES */
+:root {
   /* colors */
-  --font-color: #ffffff;
-  --primary-color: #ffffff;
-  --secondary-color: #ffffff;
+  --font-color: #183650;
+  --primary-color: #183650;
+  --secondary-color: #db743e;
   --tertiary-color: #ffffff;
+  --light-color: #f0f0f0;
+  --light-color2: #f9f9f9;
+
+  /* containers */
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.432);
+  --container-br-S: 4px;
+  --container-br-L: 8px;
+
+  /* fonts */
+  --little-font: 'Hind', sans-serif;
+  --big-font: 'Montserrat', sans-serif;
 
   /* fonts sizes */
-  --fontS:1rem;
-  --fontM:2rem;
-  --fontL:3rem;
-  --fontXL:4rem;
+  --fontS: 1rem;
+  --fontM: 1.5rem;
+  --fontL: 3rem;
+  --fontXL: 4rem;
 
   /* margin sizes  */
+  --marginXS: 0.5rem;
   --marginS: 1rem;
   --marginM: 2rem;
   --marginL: 3rem;
   --marginXL: 4rem;
 
   /* padding sizes */
+  --paddingXS: 0.5rem;
   --paddingS: 1rem;
   --paddingM: 2rem;
   --paddingL: 3rem;
   --paddingXL: 4rem;
 
   /* transition */
-  --transition1:ease-in-out 333ms;
-  --transition2:ease-in-out 666ms;
-  --transition3:ease-in-out 1000ms;
+  --transition1: ease-in-out 333ms;
+  --transition2: ease-in-out 666ms;
+  --transition3: ease-in-out 1000ms;
 
   /* input */
-  --input-br:10px;
-  --input-shadow:0 0 10px rgba(0, 0, 0, 0.212);
-  --input-inset-shadow:inset 0 -5px 10px rgba(0, 0, 0, 0.212);
-  --input-h:1.5rem;
-  --input-w:10rem;
+  --input-br: 8px;
+  --input-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  --input-inset-shadow: inset 0 0px 0px rgba(0, 0, 0, 0);
+  --input-h: 3.43rem;
+  --input-w: 25rem;
 
   /* button */
-  --btn-br:10px;
-  --btn-shadow:0 0 10px rgba(0, 0, 0, 0.212);
-  --btn-hover-shadow:0 0 10px rgba(0, 0, 0, 0.212);
-  --btn-h: 1.5rem;
-  --btn-w:6rem;
+  --btn-br: 8px;
+  --btn-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+  --btn-hover-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  --btn-h: 3.43rem;
+  --btn-w: 9rem;
 }
 
 /* -----------SET----------- */
 
-.App{
+.App {
   min-height: 100vh;
+  background-color: var(--ligh-color2);
+}
+html {
+  background-color: #f9f9f9;
+}
+body {
+  font-family: var(--big-font);
 }
 
 /* className="page" (A mettre dans la div parente de chaque composant page! */
-.page{
-  margin:var(--marginM);
+.page {
+  margin: 5rem 0 0 0;
+  min-height: 100vh;
+  background-color: #f9f9f9;
 }
 
-h1{
+h1 {
   font-size: var(--fontXL);
 }
-h2{
-  font-size:var(--fontL);
+h2 {
+  font-size: var(--fontL);
 }
-h3{
+h3 {
   font-size: var(--fontM);
 }
 
+p {
+  font-family: var(--little-font);
+}
 
 /* className="btn" */
-.btn{
-width: var(--btn-w);
-height:var(--btn-h);
-color: var(--primary-color);
-background-color: var(--secondary-color);
-font-size: var(--fontM);
-border-radius: var(--btn-br);
-box-shadow: var(--btn-shadow);
-transition:var(--transition2);
+.btn {
+  width: var(--btn-w);
+  height: var(--btn-h);
+  color: var(--light-color);
+  background-color: var(--secondary-color);
+  font-size: var(--fontS);
+  border-radius: var(--btn-br);
+  /* box-shadow: var(--btn-shadow); */
+  transition: var(--transition2);
+  border: none;
 }
-.btn:hover{
-  background-color: var(--primary-color);
-  color:var(--tertiary-color);
+.btn:hover {
+  background-color: var(--light-color);
+  color: var(--secondary-color);
 }
 
 /* className="inpt" */
-.inpt{
-  width:var(--input-w);
-  height:var(--input-h);
+.inpt {
+  width: var(--input-w);
+  height: var(--input-h);
   border-radius: var(--input-br);
-  box-shadow: var(--input-inset-shadow),var(--input-shadow);
-  padding:var(--paddingM)
+  padding: var(--paddingS);
+  font-size: 1rem;
+  background-color: var(--light-color);
+}
+.inpt::placeholder {
+  color: #979191;
 }
 
 /* -----------TABLET----------- */
 @media screen and(min-width:720px) {
-
 }
 
 /* -----------DESKTOP----------- */
-@media screen and(min-width:960px) {
-  
+@media screen and (min-width: 960px) {
+  .page {
+    margin: 0 0 0 11rem;
+  }
 }

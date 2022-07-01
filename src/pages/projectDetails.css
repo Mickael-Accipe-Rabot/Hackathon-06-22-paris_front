@@ -1,0 +1,107 @@
+
+.projectDetailsInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 85%;
+    height: 5rem;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    border-radius: 5px;
+}
+
+.projectDetailsDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    width: 50%;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 3rem;
+    border-radius: 5px;
+}
+
+.projectDetails-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10rem;
+    margin-bottom: 2rem;
+    width: 90%;
+}
+
+.projectDetails-name {
+    color: var(--secondary-color);
+    font-family: var( --big-font);
+    font-size: var(--fontL);
+    margin-left: 3rem;
+}
+
+.projectDetailsInfo table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    
+}
+
+.projectDetailsInfo th {
+    color: black;
+    text-align: left;
+    padding-bottom: 5px;
+    font-size: var(--fontS);
+    font-weight: 400;
+    font-family: var(--big-font);
+
+}
+
+.projectDetailsInfo td {
+    text-align: left;
+    word-wrap: break-word;
+    font-size: var(--fontS);
+    font-weight: 0;
+    font-family: var(--little-font);
+    border: none;
+}
+
+.projectDetails-title {
+    padding-bottom: 1rem;
+}
+
+.projectDetails-desc {
+    font-family: var(--little-font);
+    font-size: var(--fontS);
+}
+
+.projectDetails-stackholders {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    width: 50%;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 3rem;
+    border-radius: 5px;
+}
+
+.projectDetails-content {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+
+.projectDetails-link {
+    margin-left: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-family: var(--little-font);
+    font-size: 10px;
+    color: gray;
+    text-decoration: none;
+}

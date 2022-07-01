@@ -1,0 +1,45 @@
+.CoursesProjectCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20rem;
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--little-font);
+  font-size: 12px;
+  width: 90%;
+  height: 4rem;
+  margin-left: 3rem;
+}
+
+.CoursesProjectCard:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.CoursesProjectCard table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.CoursesProjectCard tr {
+  text-align: left;
+  width: 20%;
+  word-wrap: break-word;
+  padding-bottom: 5px;
+  font-size: var(--fontS);
+  font-weight: 400;
+  font-family: var(--big-font);
+}
+
+.CoursesProjectCard td {
+  text-align: left;
+  word-wrap: break-word;
+  font-size: var(--fontS);
+  font-weight: 0;
+  font-family: var(--little-font);
+  padding-bottom: 1rem;
+}

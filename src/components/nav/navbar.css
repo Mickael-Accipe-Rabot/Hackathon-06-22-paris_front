@@ -1,0 +1,114 @@
+.navbar-container {
+  position: fixed;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  background-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  font-weight: bold;
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+.navbar-list {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  height: 100%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+  width: 4rem;
+  color: var(--font-color);
+  transition: var(--transition2);
+  color: var(--light-color);
+}
+
+.navbar-user {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+.navlink-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navlink-logo {
+  width: 5rem;
+  margin: 0.5rem;
+}
+.navbar-user {
+  margin: 0 var(--marginL) 0 0;
+}
+.logOut {
+  margin: 0 1rem 0 0;
+}
+
+@media screen and (min-width: 960px) {
+  .navbar-container {
+    flex-direction: column;
+    left: 0;
+    height: 100vh;
+    width: 11rem;
+    font-size: var(--fontM);
+  }
+  .navbar-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+  }
+  .nav-links {
+    height: 4rem;
+    width: 11rem;
+  }
+  .navbar-list li {
+    height: 4rem;
+  }
+  .nav-links:hover {
+    background-color: var(--secondary-color);
+  }
+  .navlink-user:hover,
+  .navbar-user:hover,
+  .navlink-logo:hover {
+    background-color: var(--primary-color);
+  }
+  .navbar-user {
+    margin: 0 0 var(--marginL) 0;
+  }
+  .navlink-logo {
+    width: 9rem;
+  }
+  .navbar-list li:first-child {
+    height: 10rem;
+  }
+  .logOut {
+    width: 100%;
+    border-top: solid 1px white;
+    transition: ease-in-out 200ms;
+  }
+  .logOut:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  .navbar-user {
+    display: block;
+  }
+}
