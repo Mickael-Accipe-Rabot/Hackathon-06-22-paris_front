@@ -9,12 +9,20 @@ const ProjectCard = ({ project, color }) => {
   const start_date = moment(project.start_date).format('MMM Do YY');
   const end_date = moment(project.end_date).format('MMM Do YY');
 
+
+  var random_boolean_value = Math.random() < 0.5;
+  for(var i=0 ; i < 10 ; i++){
+    var rand_number = Math.random();
+    console.log(rand_number);
+    var random_boolean_value = rand_number < 0.5;
+    console.log(random_boolean_value);
+ }
   //  let { id } = useParams();
 
   return (
     <Link
       to={`/project-details/${project.id} `}
-      className="projectCard-container"
+      className={random_boolean_value ? "projectCard-container secret-case" : 'projectCard-container'}
     >
       <div className='project-card'>
         {/* <Link to={`/project-detail${project.id}`}> */}
