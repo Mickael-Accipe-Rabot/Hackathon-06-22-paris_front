@@ -1,6 +1,20 @@
+## HACKATHON for Apside
+The goal was to imrove co-constructon in business between agencies
+
+We wanted to : 
+- improve information's sharing
+- Follow employees disponibilities
+- Share courses to junior
+- Follow customer relationship
+- avoid duplicated projects
+- respect confidentiality
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Before run Start by :
+## `npm install`
 
 ## Available Scripts
 
