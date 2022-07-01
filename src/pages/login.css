@@ -1,3 +1,9 @@
+.page-container-login {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+}
+
 .container-login {
   display: flex;
   align-items: center;
@@ -217,8 +223,11 @@ select.input-error {
 
 @media screen and (min-width: 960px) {
 
+<<<<<<< HEAD
+=======
  
 
+>>>>>>> dev
   .container-login {
     display: flex;
     align-items: center;

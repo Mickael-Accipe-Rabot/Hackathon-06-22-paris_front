@@ -55,69 +55,88 @@ const Login = () => {
     },
   });
 
-    // Toggle Showpassword
-    const [passwordShown, setPasswordShown] = useState(false);
-    const togglePassword = () => {
-      setPasswordShown(!passwordShown);
-    };
+  // Toggle Showpassword
+  const [passwordShown, setPasswordShown] = useState(false);
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
 
   return (
-    <div className="container-login">
-      <img src={logowhite} className="logo" />
-      <h4 className="baseline">Plongez dans l'univers de notre ESN</h4>
-      <div className="container-logo">
-      <div className="register">
-      <form onSubmit={handleSubmit} autoComplete="off" className="form-register">
-        <label htmlFor="email">
-          <input
-            required
-            id="email"
-            name="email"
-            type="text"
-            placeholder="Email"
-            onChange={handleChange}
-            value={values.email}
-            onBlur={handleBlur}
-            style={{ width: "100%", marginTop: "0px" }}
-            className={errors.email && touched.email ? "input-error" : ""}
-            error={errors.email && touched.email ? "input-error" : ""}
-          />
-        </label>
-        {errors.email && touched.email && (
-          <p className="error">{errors.email}</p>
-        )}
+    <div className="page-container-login">
+      <div className="container-login">
+        <img src={logowhite} className="logo" />
+        <h4 className="baseline">Plongez dans l'univers de notre ESN</h4>
+        <div className="container-logo">
+          <div className="register">
+            <form
+              onSubmit={handleSubmit}
+              autoComplete="off"
+              className="form-register"
+            >
+              <label htmlFor="email">
+                <input
+                  required
+                  id="email"
+                  name="email"
+                  type="text"
+                  placeholder="Email"
+                  onChange={handleChange}
+                  value={values.email}
+                  onBlur={handleBlur}
+                  style={{ width: "100%", marginTop: "0px" }}
+                  className={errors.email && touched.email ? "input-error" : ""}
+                  error={errors.email && touched.email ? "input-error" : ""}
+                />
+              </label>
+              {errors.email && touched.email && (
+                <p className="error">{errors.email}</p>
+              )}
 
-        <div className="input-password">
-          <label htmlFor="password">
-            <input
-              required
-              id="password"
-              name="password"
-              placeholder="Password"
-              onChange={handleChange}
-              value={values.password}
-              onBlur={handleBlur}
-              type={passwordShown ? "text" : "password"}
-              style={{ width: "100%", marginTop: "20px", position: "relative" }}
-              className={
-                errors.password && touched.password ? "input-error" : ""
-              }
-              error={errors.password && touched.password ? "input-error" : ""}
-            />
-          </label>
-          <i className="input-icons" onClick={togglePassword}>
-            {passwordShown ? <FaEyeSlash /> : <FaEye />}
-          </i>
-          {errors.password && touched.password && (
-            <p className="error">{errors.password}</p>
-          )}
+              <div className="input-password">
+                <label htmlFor="password">
+                  <input
+                    required
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    onChange={handleChange}
+                    value={values.password}
+                    onBlur={handleBlur}
+                    type={passwordShown ? "text" : "password"}
+                    style={{
+                      width: "100%",
+                      marginTop: "20px",
+                      position: "relative",
+                    }}
+                    className={
+                      errors.password && touched.password ? "input-error" : ""
+                    }
+                    error={
+                      errors.password && touched.password ? "input-error" : ""
+                    }
+                  />
+                </label>
+                <i className="input-icons" onClick={togglePassword}>
+                  {passwordShown ? <FaEyeSlash /> : <FaEye />}
+                </i>
+                {errors.password && touched.password && (
+                  <p className="error">{errors.password}</p>
+                )}
+              </div>
+
+              <button type="submit" className="button-register">
+                SUBMIT
+              </button>
+              <p className="error">{error}</p>
+              <Link
+                to={{ pathname: `/#` }}
+                style={{ textDecoration: "none" }}
+              >
+                <p className="forgot-password">Forgot password ?</p>
+              </Link>
+            </form>
+          </div>
         </div>
-
-        <button type="submit" className="button-register">SUBMIT</button>
-        <p className="error">{error}</p>
-        <Link to={{ pathname: `/Home` }} style={{ textDecoration: 'none' }}><p className="forgot-password">Forgot password ?</p></Link>
-      </form>
-    </div>
       </div>
     </div>
   );
