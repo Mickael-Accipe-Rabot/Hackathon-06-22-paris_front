@@ -72,7 +72,9 @@
   min-height: 100vh;
   background-color: var(--ligh-color2);
 }
-
+html{
+  background-color:#F9F9F9;
+}
 body {
   font-family: var(--big-font);
 }
