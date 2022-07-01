@@ -15,8 +15,7 @@ const CreateProject = () => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/employees/${user.id}`)
       .then((res) => res.data)
-      .then((data) => setUserActive(data)
-      );
+      .then((data) => setUserActive(data));
   }, [user.id]);
 
   return (
@@ -25,7 +24,7 @@ const CreateProject = () => {
         <Link to="/project-form">
           <div className="create-btn btn">New project</div>
         </Link>
-     ) : null} 
+      ) : null}
     </div>
   );
 };

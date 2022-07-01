@@ -6,7 +6,6 @@
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    /* margin-bottom: 1rem; */
   }  
   
   input {
@@ -18,8 +17,6 @@
     border-radius: 5px;
     padding: 10px;
     font-size: 13px;
-    /* font-family: "Montserrat";
-    font-style: normal; */
     color: #979191;
     width: 100%;
   }

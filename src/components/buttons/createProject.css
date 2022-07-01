@@ -1,9 +1,4 @@
 .create-btn {
-  /* 
-    left:50%;
-    bottom: 1rem;
-    width: 4rem;
-    height: 4rem;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,8 +23,8 @@
   .create-btn {
     right: 4.45%;
     top: 2rem;
-    left:initial;
-    bottom:initial;
-    transform:initial;
+    left: initial;
+    bottom: initial;
+    transform: initial;
   }
 }
